@@ -118,19 +118,23 @@ Bench manual for soil total RNA extraction using the QIAGEN RNeasy PowerSoil Tot
 
 ## Bench Record
 
-| Field | Value |
-|---|---|
-| Date | |
-| Operator | |
-| Sample IDs | |
-| Soil input per sample (g) | |
-| Phenol/chloroform lot # | |
-| SR4 incubation temperature used | −15 to −30°C / −20°C (previous protocol) |
-| Final resuspension volume | 100 µL |
-| Quantification method | |
-| RNA concentration (ng/µL) | |
-| A260/A280 | |
-| Notes | |
+<table id="bench-record-rna" class="bench-record">
+  <tbody>
+    <tr><th>Date</th><td contenteditable="true"></td></tr>
+    <tr><th>Operator</th><td contenteditable="true"></td></tr>
+    <tr><th>Sample IDs</th><td contenteditable="true"></td></tr>
+    <tr><th>Soil input per sample (g)</th><td contenteditable="true"></td></tr>
+    <tr><th>Phenol/chloroform lot #</th><td contenteditable="true"></td></tr>
+    <tr><th>SR4 incubation temperature</th><td contenteditable="true">−15 to −30°C</td></tr>
+    <tr><th>Final resuspension volume</th><td contenteditable="true">100 µL</td></tr>
+    <tr><th>Quantification method</th><td contenteditable="true"></td></tr>
+    <tr><th>RNA concentration (ng/µL)</th><td contenteditable="true"></td></tr>
+    <tr><th>A260/A280</th><td contenteditable="true"></td></tr>
+    <tr><th>Notes</th><td contenteditable="true"></td></tr>
+  </tbody>
+</table>
+
+<button class="export-btn" onclick="exportBenchRecord('bench-record-rna', 'rna-extraction-bench-record.png')">Export as PNG</button>
 
 ---
 

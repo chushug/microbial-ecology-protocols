@@ -110,19 +110,23 @@ Bench manual for 96-well plate soil DNA extraction using the QIAGEN DNeasy 96 Po
 
 ## Bench Record
 
-| Field | Value |
-|---|---|
-| Date | |
-| Operator | |
-| Sample IDs | |
-| Soil input per well (g) | |
-| CD2 volume used (200 or 250 µL) | |
-| Elution volume | 100 µL |
-| Post-extraction quantification method | |
-| DNA concentration (ng/µL) | |
-| A260/A280 | |
-| A260/A230 | |
-| Notes | |
+<table id="bench-record-dna" class="bench-record">
+  <tbody>
+    <tr><th>Date</th><td contenteditable="true"></td></tr>
+    <tr><th>Operator</th><td contenteditable="true"></td></tr>
+    <tr><th>Sample IDs</th><td contenteditable="true"></td></tr>
+    <tr><th>Soil input per well (g)</th><td contenteditable="true"></td></tr>
+    <tr><th>CD2 volume used</th><td contenteditable="true">200 µL</td></tr>
+    <tr><th>Elution volume</th><td contenteditable="true">100 µL</td></tr>
+    <tr><th>Quantification method</th><td contenteditable="true"></td></tr>
+    <tr><th>DNA concentration (ng/µL)</th><td contenteditable="true"></td></tr>
+    <tr><th>A260/A280</th><td contenteditable="true"></td></tr>
+    <tr><th>A260/A230</th><td contenteditable="true"></td></tr>
+    <tr><th>Notes</th><td contenteditable="true"></td></tr>
+  </tbody>
+</table>
+
+<button class="export-btn" onclick="exportBenchRecord('bench-record-dna', 'dna-extraction-bench-record.png')">Export as PNG</button>
 
 ---
 

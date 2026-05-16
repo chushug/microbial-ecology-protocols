@@ -218,24 +218,28 @@ Store cDNA at −20°C, or use immediately for PCR/qPCR. As a starting point, us
 
 ## Bench Record
 
-| Field | Value |
-|---|---|
-| Sample ID | |
-| Date | |
-| Starting RNA volume | <span id="recordRnaVolume">50 µL</span> |
-| Starting RNA concentration | <span id="recordRnaConcentration">about 10 ng/µL</span> |
-| Starting total RNA mass | <span id="recordRnaMass">about 500 ng</span> |
-| TURBO DNase volume | <span id="recordEnzymeVolume">1 µL</span> |
-| DNase incubation time | 20–30 min |
-| DNase Inactivation Reagent volume | <span id="recordInactivationVolume">5.6 µL</span> |
-| Centrifuge model and speed | |
-| Recovered RNA volume | |
-| Post-DNase RNA concentration | |
-| Residual dsDNA result | |
-| cDNA RNA input volume | <span id="recordCdnaRnaVolume">10 µL</span> |
-| cDNA estimated RNA input mass | <span id="recordCdnaRnaMass">about 100 ng</span> |
-| No-RT control included | Yes / No |
-| Notes | |
+<table id="bench-record-cdna" class="bench-record">
+  <tbody>
+    <tr><th>Sample ID</th><td contenteditable="true"></td></tr>
+    <tr><th>Date</th><td contenteditable="true"></td></tr>
+    <tr><th>Starting RNA volume</th><td contenteditable="true"><span id="recordRnaVolume">50 µL</span></td></tr>
+    <tr><th>Starting RNA concentration</th><td contenteditable="true"><span id="recordRnaConcentration">about 10 ng/µL</span></td></tr>
+    <tr><th>Starting total RNA mass</th><td contenteditable="true"><span id="recordRnaMass">about 500 ng</span></td></tr>
+    <tr><th>TURBO DNase volume</th><td contenteditable="true"><span id="recordEnzymeVolume">1 µL</span></td></tr>
+    <tr><th>DNase incubation time</th><td contenteditable="true">20–30 min</td></tr>
+    <tr><th>DNase Inactivation Reagent volume</th><td contenteditable="true"><span id="recordInactivationVolume">5.6 µL</span></td></tr>
+    <tr><th>Centrifuge model and speed</th><td contenteditable="true"></td></tr>
+    <tr><th>Recovered RNA volume</th><td contenteditable="true"></td></tr>
+    <tr><th>Post-DNase RNA concentration</th><td contenteditable="true"></td></tr>
+    <tr><th>Residual dsDNA result</th><td contenteditable="true"></td></tr>
+    <tr><th>cDNA RNA input volume</th><td contenteditable="true"><span id="recordCdnaRnaVolume">10 µL</span></td></tr>
+    <tr><th>cDNA estimated RNA input mass</th><td contenteditable="true"><span id="recordCdnaRnaMass">about 100 ng</span></td></tr>
+    <tr><th>No-RT control included</th><td contenteditable="true">Yes / No</td></tr>
+    <tr><th>Notes</th><td contenteditable="true"></td></tr>
+  </tbody>
+</table>
+
+<button class="export-btn" onclick="exportBenchRecord('bench-record-cdna', 'rna-dnase-cdna-bench-record.png')">Export as PNG</button>
 
 ---
 
