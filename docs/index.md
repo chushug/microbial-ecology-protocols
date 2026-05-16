@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Microbial Ecology Lab Protocols
 
 Bench-ready protocols with reagent calculators, interactive step checklists, and bench record templates.
