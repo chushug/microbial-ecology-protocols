@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Microbial Ecology Lab Protocols</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1c2630;
+      --muted: #5c6875;
+      --line: #d8dee6;
+      --paper: #fbfcfd;
+      --panel: #ffffff;
+      --blue: #275c9d;
+      --green: #2d6f4a;
+      --shadow: 0 14px 36px rgba(28, 38, 48, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+    }
+
+    header {
+      background: #eef3f7;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 22px 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 22px 60px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
+
+    .protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .protocol-card {
+      display: block;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      text-decoration: none;
+      color: var(--ink);
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .protocol-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 18px rgba(39, 92, 157, 0.12);
+    }
+
+    .card-title {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    .card-desc {
+      margin: 0 0 12px;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eef3f7;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .card-time {
+      margin: 8px 0 0;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 560px) {
+      .header-inner, main { padding-left: 14px; padding-right: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Microbial Ecology Lab Protocols</h1>
+      <p class="subtitle">Bench-ready protocols with reagent calculators, step checklists, and bench record templates.</p>
+    </div>
+  </header>
+
+  <main>
+    <h2>RNA &amp; cDNA</h2>
+    <div class="protocol-grid">
+      <a class="protocol-card" href="soil-rna-dnase-cdna.html">
+        <p class="card-title">Soil RNA DNase Removal &amp; cDNA Synthesis</p>
+        <p class="card-desc">TURBO DNA-free treatment followed by SuperScript IV first-strand synthesis for soil environmental RNA samples (~10 ng/µL).</p>
+        <div class="card-tags">
+          <span class="tag">RNA</span>
+          <span class="tag">DNase</span>
+          <span class="tag">cDNA</span>
+          <span class="tag">SSIV</span>
+        </div>
+        <p class="card-time">Active: ~1.5–2.5 h &nbsp;·&nbsp; Elapsed: ~2.5–4 h</p>
+      </a>
+    </div>
+
+    <!-- Add more sections here as protocols are added, e.g.:
+    <h2>DNA Extraction</h2>
+    <h2>qPCR</h2>
+    <h2>PCR &amp; Gel</h2>
+    -->
+  </main>
+
+  <footer>
+    Microbial Ecology Lab &nbsp;·&nbsp; Last updated 2026-05
+  </footer>
+</body>
+</html>
