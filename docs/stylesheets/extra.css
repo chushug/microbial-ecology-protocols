@@ -1,6 +1,11 @@
 /* Bench record — editable cells */
+.bench-record th {
+  text-align: left;
+  white-space: nowrap;
+}
 .bench-record td[contenteditable] {
-  min-width: 160px;
+  min-width: 200px;
+  padding: 10px 16px;
   cursor: text;
   outline: none;
 }
