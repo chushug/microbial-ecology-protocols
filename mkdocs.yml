@@ -1,0 +1,29 @@
+site_name: Microbial Ecology Lab Protocols
+site_url: https://chushug.github.io/microbial-ecology-protocols/
+
+theme:
+  name: material
+  palette:
+    primary: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - RNA & cDNA:
+    - Soil RNA DNase & cDNA Synthesis: rna-cdna/soil-rna-dnase-cdna.md
