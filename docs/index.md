@@ -1,11 +1,14 @@
 ---
 hide:
   - toc
+  - navigation
 ---
 
 # Microbial Ecology Lab Protocols
 
-Bench-ready protocols with reagent calculators, interactive step checklists, and bench record templates.
+A collection of bench-ready protocols for soil microbial ecology research. Each protocol includes an interactive reagent calculator that scales volumes to your sample count, a step-by-step checklist you can tick off at the bench, and a bench record template to fill in during the run.
+
+Protocols are written for environmental soil samples and cover RNA/DNA extraction, DNase treatment, cDNA synthesis, and qPCR workflows.
 
 ---
 
