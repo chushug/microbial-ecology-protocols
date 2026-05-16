@@ -789,60 +789,23 @@
 </div>
 <hr />
 <h2 id="bench-record">Bench Record</h2>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Date</td>
-<td></td>
-</tr>
-<tr>
-<td>Operator</td>
-<td></td>
-</tr>
-<tr>
-<td>Sample IDs</td>
-<td></td>
-</tr>
-<tr>
-<td>Soil input per well (g)</td>
-<td></td>
-</tr>
-<tr>
-<td>CD2 volume used (200 or 250 µL)</td>
-<td></td>
-</tr>
-<tr>
-<td>Elution volume</td>
-<td>100 µL</td>
-</tr>
-<tr>
-<td>Post-extraction quantification method</td>
-<td></td>
-</tr>
-<tr>
-<td>DNA concentration (ng/µL)</td>
-<td></td>
-</tr>
-<tr>
-<td>A260/A280</td>
-<td></td>
-</tr>
-<tr>
-<td>A260/A230</td>
-<td></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td></td>
-</tr>
-</tbody>
+<table id="bench-record-dna" class="bench-record">
+  <tbody>
+    <tr><th>Date</th><td contenteditable="true"></td></tr>
+    <tr><th>Operator</th><td contenteditable="true"></td></tr>
+    <tr><th>Sample IDs</th><td contenteditable="true"></td></tr>
+    <tr><th>Soil input per well (g)</th><td contenteditable="true"></td></tr>
+    <tr><th>CD2 volume used</th><td contenteditable="true">200 µL</td></tr>
+    <tr><th>Elution volume</th><td contenteditable="true">100 µL</td></tr>
+    <tr><th>Quantification method</th><td contenteditable="true"></td></tr>
+    <tr><th>DNA concentration (ng/µL)</th><td contenteditable="true"></td></tr>
+    <tr><th>A260/A280</th><td contenteditable="true"></td></tr>
+    <tr><th>A260/A230</th><td contenteditable="true"></td></tr>
+    <tr><th>Notes</th><td contenteditable="true"></td></tr>
+  </tbody>
 </table>
+
+<p><button class="export-btn" onclick="exportBenchRecord('bench-record-dna', 'dna-extraction-bench-record.png')">Export as PNG</button></p>
 <hr />
 <h2 id="stop-points">Stop Points</h2>
 <div class="admonition danger">
@@ -910,6 +873,10 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+      
+        <script src="../../javascripts/bench-record.js"></script>
       
     
   </body>

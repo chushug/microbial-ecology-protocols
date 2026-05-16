@@ -1194,80 +1194,28 @@
 <p>Store cDNA at −20°C, or use immediately for PCR/qPCR. As a starting point, use cDNA as no more than about 10% of the final downstream reaction volume.</p>
 <hr />
 <h2 id="bench-record">Bench Record</h2>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Sample ID</td>
-<td></td>
-</tr>
-<tr>
-<td>Date</td>
-<td></td>
-</tr>
-<tr>
-<td>Starting RNA volume</td>
-<td><span id="recordRnaVolume">50 µL</span></td>
-</tr>
-<tr>
-<td>Starting RNA concentration</td>
-<td><span id="recordRnaConcentration">about 10 ng/µL</span></td>
-</tr>
-<tr>
-<td>Starting total RNA mass</td>
-<td><span id="recordRnaMass">about 500 ng</span></td>
-</tr>
-<tr>
-<td>TURBO DNase volume</td>
-<td><span id="recordEnzymeVolume">1 µL</span></td>
-</tr>
-<tr>
-<td>DNase incubation time</td>
-<td>20–30 min</td>
-</tr>
-<tr>
-<td>DNase Inactivation Reagent volume</td>
-<td><span id="recordInactivationVolume">5.6 µL</span></td>
-</tr>
-<tr>
-<td>Centrifuge model and speed</td>
-<td></td>
-</tr>
-<tr>
-<td>Recovered RNA volume</td>
-<td></td>
-</tr>
-<tr>
-<td>Post-DNase RNA concentration</td>
-<td></td>
-</tr>
-<tr>
-<td>Residual dsDNA result</td>
-<td></td>
-</tr>
-<tr>
-<td>cDNA RNA input volume</td>
-<td><span id="recordCdnaRnaVolume">10 µL</span></td>
-</tr>
-<tr>
-<td>cDNA estimated RNA input mass</td>
-<td><span id="recordCdnaRnaMass">about 100 ng</span></td>
-</tr>
-<tr>
-<td>No-RT control included</td>
-<td>Yes / No</td>
-</tr>
-<tr>
-<td>Notes</td>
-<td></td>
-</tr>
-</tbody>
+<table id="bench-record-cdna" class="bench-record">
+  <tbody>
+    <tr><th>Sample ID</th><td contenteditable="true"></td></tr>
+    <tr><th>Date</th><td contenteditable="true"></td></tr>
+    <tr><th>Starting RNA volume</th><td contenteditable="true"><span id="recordRnaVolume">50 µL</span></td></tr>
+    <tr><th>Starting RNA concentration</th><td contenteditable="true"><span id="recordRnaConcentration">about 10 ng/µL</span></td></tr>
+    <tr><th>Starting total RNA mass</th><td contenteditable="true"><span id="recordRnaMass">about 500 ng</span></td></tr>
+    <tr><th>TURBO DNase volume</th><td contenteditable="true"><span id="recordEnzymeVolume">1 µL</span></td></tr>
+    <tr><th>DNase incubation time</th><td contenteditable="true">20–30 min</td></tr>
+    <tr><th>DNase Inactivation Reagent volume</th><td contenteditable="true"><span id="recordInactivationVolume">5.6 µL</span></td></tr>
+    <tr><th>Centrifuge model and speed</th><td contenteditable="true"></td></tr>
+    <tr><th>Recovered RNA volume</th><td contenteditable="true"></td></tr>
+    <tr><th>Post-DNase RNA concentration</th><td contenteditable="true"></td></tr>
+    <tr><th>Residual dsDNA result</th><td contenteditable="true"></td></tr>
+    <tr><th>cDNA RNA input volume</th><td contenteditable="true"><span id="recordCdnaRnaVolume">10 µL</span></td></tr>
+    <tr><th>cDNA estimated RNA input mass</th><td contenteditable="true"><span id="recordCdnaRnaMass">about 100 ng</span></td></tr>
+    <tr><th>No-RT control included</th><td contenteditable="true">Yes / No</td></tr>
+    <tr><th>Notes</th><td contenteditable="true"></td></tr>
+  </tbody>
 </table>
+
+<p><button class="export-btn" onclick="exportBenchRecord('bench-record-cdna', 'rna-dnase-cdna-bench-record.png')">Export as PNG</button></p>
 <hr />
 <h2 id="bench-notes">Bench Notes</h2>
 <div class="bench-notes">
@@ -1470,6 +1418,10 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+      
+        <script src="../../javascripts/bench-record.js"></script>
       
     
   </body>

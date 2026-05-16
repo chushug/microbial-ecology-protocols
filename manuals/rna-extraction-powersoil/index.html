@@ -797,60 +797,23 @@
 </div>
 <hr />
 <h2 id="bench-record">Bench Record</h2>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Date</td>
-<td></td>
-</tr>
-<tr>
-<td>Operator</td>
-<td></td>
-</tr>
-<tr>
-<td>Sample IDs</td>
-<td></td>
-</tr>
-<tr>
-<td>Soil input per sample (g)</td>
-<td></td>
-</tr>
-<tr>
-<td>Phenol/chloroform lot #</td>
-<td></td>
-</tr>
-<tr>
-<td>SR4 incubation temperature used</td>
-<td>−15 to −30°C / −20°C (previous protocol)</td>
-</tr>
-<tr>
-<td>Final resuspension volume</td>
-<td>100 µL</td>
-</tr>
-<tr>
-<td>Quantification method</td>
-<td></td>
-</tr>
-<tr>
-<td>RNA concentration (ng/µL)</td>
-<td></td>
-</tr>
-<tr>
-<td>A260/A280</td>
-<td></td>
-</tr>
-<tr>
-<td>Notes</td>
-<td></td>
-</tr>
-</tbody>
+<table id="bench-record-rna" class="bench-record">
+  <tbody>
+    <tr><th>Date</th><td contenteditable="true"></td></tr>
+    <tr><th>Operator</th><td contenteditable="true"></td></tr>
+    <tr><th>Sample IDs</th><td contenteditable="true"></td></tr>
+    <tr><th>Soil input per sample (g)</th><td contenteditable="true"></td></tr>
+    <tr><th>Phenol/chloroform lot #</th><td contenteditable="true"></td></tr>
+    <tr><th>SR4 incubation temperature</th><td contenteditable="true">−15 to −30°C</td></tr>
+    <tr><th>Final resuspension volume</th><td contenteditable="true">100 µL</td></tr>
+    <tr><th>Quantification method</th><td contenteditable="true"></td></tr>
+    <tr><th>RNA concentration (ng/µL)</th><td contenteditable="true"></td></tr>
+    <tr><th>A260/A280</th><td contenteditable="true"></td></tr>
+    <tr><th>Notes</th><td contenteditable="true"></td></tr>
+  </tbody>
 </table>
+
+<p><button class="export-btn" onclick="exportBenchRecord('bench-record-rna', 'rna-extraction-bench-record.png')">Export as PNG</button></p>
 <hr />
 <h2 id="stop-points">Stop Points</h2>
 <div class="admonition danger">
@@ -918,6 +881,10 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+      
+        <script src="../../javascripts/bench-record.js"></script>
       
     
   </body>
