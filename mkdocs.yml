@@ -1,6 +1,6 @@
 site_name: Microbial Ecology Lab Protocols
 site_url: https://chushug.github.io/microbial-ecology-protocols/
-copyright: '&copy; 2026 <a href="https://github.com/chushug/microbial-ecology-protocols" target="_blank">chushug</a>'
+copyright: '&copy; 2026 <a href="https://github.com/chushug/microbial-ecology-protocols" target="_blank">Chushu Gao</a>'
 
 theme:
   name: material
