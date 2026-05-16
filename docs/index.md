@@ -12,12 +12,16 @@ Protocols are written for environmental soil samples and cover RNA/DNA extractio
 
 ---
 
-## RNA & cDNA
+## Bench Manuals
 
-| Protocol | Kits | Active time | Elapsed |
-|---|---|---|---|
-| [Soil RNA DNase Removal & cDNA Synthesis](rna-cdna/soil-rna-dnase-cdna.md) | TURBO DNA-free · SuperScript IV | ~1.5–2.5 h | ~2.5–4 h |
+Step-by-step bench references with interactive checklists and reagent calculators.
+
+| Manual | Kit | Elapsed |
+|---|---|---|
+| [Soil DNA Extraction (96-well)](manuals/dna-extraction-96-powersoil.md) | DNeasy 96 PowerSoil Pro | ~2–3 h |
+| [Soil RNA Extraction](manuals/rna-extraction-powersoil.md) | RNeasy PowerSoil Total RNA | ~2.5–3.5 h |
+| [Soil RNA DNase Removal & cDNA Synthesis](manuals/soil-rna-dnase-cdna.md) | TURBO DNA-free · SuperScript IV | ~2.5–4 h |
 
 ---
 
-*More protocols coming soon: DNA Extraction, qPCR, PCR & Gel.*
+*Full Protocols (comprehensive workflow documents) coming soon.*

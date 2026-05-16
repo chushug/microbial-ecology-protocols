@@ -26,5 +26,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - RNA & cDNA:
-    - Soil RNA DNase & cDNA Synthesis: rna-cdna/soil-rna-dnase-cdna.md
+  - Bench Manuals:
+    - Soil DNA Extraction (96-well): manuals/dna-extraction-96-powersoil.md
+    - Soil RNA Extraction: manuals/rna-extraction-powersoil.md
+    - Soil RNA DNase & cDNA Synthesis: manuals/soil-rna-dnase-cdna.md
