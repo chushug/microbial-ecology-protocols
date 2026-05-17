@@ -22,6 +22,7 @@ Step-by-step bench references with interactive checklists and reagent calculator
 | [Soil RNA Extraction](manuals/rna-extraction-powersoil.md) | RNeasy PowerSoil Total RNA | ~2.5–3.5 h |
 | [Soil RNA DNase Removal & cDNA Synthesis](manuals/soil-rna-dnase-cdna.md) | TURBO DNA-free · SuperScript IV | ~2.5–4 h |
 | [Agarose Gel Electrophoresis](manuals/gel-electrophoresis.md) | GelGreen · GelRed | ~25–60 min |
+| [Regular PCR](manuals/regular-pcr.md) | PCR master mix | ~1.5–2.5 h |
 
 ---
 
