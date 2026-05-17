@@ -68,7 +68,7 @@ Bench manual for routine agarose gel electrophoresis of DNA samples, PCR/qPCR pr
 | Current gel | <span id="gelTaeVolume">50 mL</span> | <span id="gelAgarose15">0.75 g</span> | <span id="gelAgarose20">1.00 g</span> | <span id="gelStainVolume">5 µL</span> |
 
 | 1X TAE batch | 50X TAE | DI water | Final volume |
-|---|---|---|
+|---|---|---|---|
 | Standard batch | 20 mL | 980 mL | 1 L |
 
 ---
