@@ -1,0 +1,276 @@
+# Agarose Gel Electrophoresis
+
+Bench manual for routine agarose gel electrophoresis of DNA samples, PCR/qPCR products, and RNA sample checks.
+
+<div class="facts">
+  <div class="fact"><strong>Buffer</strong><span>1X TAE</span></div>
+  <div class="fact"><strong>Routine gel</strong><span>1.5%</span></div>
+  <div class="fact"><strong>Small tray</strong><span>50 mL</span></div>
+  <div class="fact"><strong>Run time</strong><span>25-60 min</span></div>
+</div>
+
+---
+
+## Before Starting
+
+!!! warning "Hot agarose"
+    Handle melted agarose carefully. Cool the flask until it feels warm, not hot, before adding stain and pouring the gel.
+
+!!! info "Stain choice"
+    Use **GelGreen** for DNA samples and **GelRed** for RNA samples. Add stain only after the agarose has cooled for 10-15 min.
+
+!!! tip "Routine setup"
+    Use a 1.5% gel for most routine checks. Use a 2% gel when you need better separation of small fragments or PCR/qPCR products.
+
+---
+
+## Materials
+
+**Reagents**
+
+- 50X TAE buffer
+- DI water
+- Agarose
+- GelGreen for DNA gels
+- GelRed for RNA gels
+- 6X loading dye
+- 1 kb DNA ladder for genomic DNA or larger DNA fragments
+- 100 bp DNA ladder for PCR/qPCR products
+
+**Equipment and Consumables**
+
+- Gel tray and comb
+- Electrophoresis chamber
+- Power supply
+- Microwave-safe flask or bottle
+- Heat-resistant gloves
+- Micropipettes and tips
+- Bio-Rad GelDoc Go system
+- UV/stain-free tray
+
+---
+
+## Buffer and Gel Calculator
+
+!!! info
+    Large trays use three times the small-tray recipe.
+
+<div class="calculator-controls">
+  <div class="control">
+    <label for="trayCount">Number of small-tray equivalents</label>
+    <input id="trayCount" type="number" min="1" step="1" value="1">
+    <p class="hint">Use 1 for a small tray, 3 for a large tray.</p>
+  </div>
+</div>
+
+| Setup | 1X TAE | Agarose for 1.5% | Agarose for 2% | GelGreen or GelRed |
+|---|---|---|---|---|
+| Current gel | <span id="gelTaeVolume">50 mL</span> | <span id="gelAgarose15">0.75 g</span> | <span id="gelAgarose20">1.00 g</span> | <span id="gelStainVolume">5 µL</span> |
+
+| 1X TAE batch | 50X TAE | DI water | Final volume |
+|---|---|---|
+| Standard batch | 20 mL | 980 mL | 1 L |
+
+---
+
+## Part A: Prepare 1X TAE Buffer
+
+*~5 min*
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>Label a clean bottle as <strong>1X TAE</strong>.</span></li>
+  <li><input type="checkbox"><span>Add <strong>20 mL 50X TAE buffer</strong> to the bottle.</span></li>
+  <li><input type="checkbox"><span>Add <strong>980 mL DI water</strong>.</span></li>
+  <li><input type="checkbox"><span>Mix well before filling the gel chamber or preparing agarose.</span></li>
+</ul>
+
+---
+
+## Part B: Make the Agarose Gel
+
+*~20-30 min*
+
+### Small Tray Recipes
+
+| Gel percentage | 1X TAE | Agarose | Stain after cooling |
+|---|---|---|---|
+| 1.5% | 50 mL | 0.75 g | 5 µL GelGreen or GelRed |
+| 2% | 50 mL | 1.00 g | 5 µL GelGreen or GelRed |
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>Choose the gel percentage: <strong>1.5%</strong> for most samples or <strong>2%</strong> for small fragments.</span></li>
+  <li><input type="checkbox"><span>Add the correct amount of agarose and 1X TAE to a microwave-safe flask.</span></li>
+  <li><input type="checkbox"><span>Microwave in <strong>30 sec intervals</strong>, swirling carefully between intervals, until the agarose is fully melted.</span></li>
+  <li><input type="checkbox"><span>Cool for <strong>10-15 min</strong>, until the flask feels warm but not hot.</span></li>
+  <li><input type="checkbox"><span>Add <strong>GelGreen for DNA samples</strong> or <strong>GelRed for RNA samples</strong>. Mix gently without introducing bubbles.</span></li>
+</ul>
+
+!!! warning "Do not add stain to very hot agarose"
+    Let the agarose cool first. Hot agarose increases burn risk and can reduce stain performance.
+
+---
+
+## Part C: Cast the Gel
+
+*~20-30 min, including solidification*
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>Place the gel tray in the casting setup.</span></li>
+  <li><input type="checkbox"><span>Pour the warm agarose into the tray.</span></li>
+  <li><input type="checkbox"><span>Insert the comb to form sample wells.</span></li>
+  <li><input type="checkbox"><span>Allow the gel to solidify completely before removing the comb.</span></li>
+  <li><input type="checkbox"><span>Place the gel in the electrophoresis chamber and cover it with 1X TAE buffer.</span></li>
+</ul>
+
+---
+
+## Part D: Load Samples
+
+*~10-20 min*
+
+### DNA Samples
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>Mix DNA sample with 6X loading dye at a <strong>5:1 ratio</strong>, such as <strong>5 µL DNA + 1 µL loading dye</strong>.</span></li>
+  <li><input type="checkbox"><span>Load <strong>5 µL 1 kb DNA ladder</strong> in the first well for size reference.</span></li>
+  <li><input type="checkbox"><span>Load <strong>5 µL</strong> of each prepared DNA sample.</span></li>
+</ul>
+
+### PCR/qPCR Products
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>If the PCR/qPCR product is colorless, mix with loading dye at the same <strong>5:1 ratio</strong>.</span></li>
+  <li><input type="checkbox"><span>If the PCR/qPCR product already contains loading dye, load it directly.</span></li>
+  <li><input type="checkbox"><span>Load <strong>5 µL 100 bp DNA ladder</strong> in the first well for size reference.</span></li>
+  <li><input type="checkbox"><span>Load <strong>5 µL</strong> of each prepared PCR/qPCR product.</span></li>
+</ul>
+
+---
+
+## Part E: Run and Image the Gel
+
+*~25-60 min*
+
+| Tray | Voltage | Run time |
+|---|---|---|
+| Small tray | 80-85 V | 25-30 min |
+| Large tray | 90-100 V | 45-60 min |
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>Connect the chamber to the power supply and confirm the samples will run toward the positive electrode.</span></li>
+  <li><input type="checkbox"><span>Run the gel using the voltage and time range for the tray size.</span></li>
+  <li><input type="checkbox"><span>Watch the dye front and stop the run before the dye reaches the end of the gel.</span></li>
+  <li><input type="checkbox"><span>Image GelGreen DNA gels or GelRed RNA gels on the Bio-Rad GelDoc Go system using the <strong>UV/stain-free tray</strong>.</span></li>
+</ul>
+
+---
+
+## Bench Record
+
+<table id="bench-record-gel-electrophoresis" class="bench-record">
+  <tbody>
+    <tr><th>Date</th><td contenteditable="true"></td></tr>
+    <tr><th>Operator</th><td contenteditable="true"></td></tr>
+    <tr><th>Sample IDs</th><td contenteditable="true"></td></tr>
+    <tr><th>Sample type</th><td contenteditable="true">DNA / PCR / qPCR / RNA</td></tr>
+    <tr><th>Gel percentage</th><td contenteditable="true">1.5%</td></tr>
+    <tr><th>Tray size</th><td contenteditable="true">Small / Large</td></tr>
+    <tr><th>Stain used</th><td contenteditable="true">GelGreen / GelRed</td></tr>
+    <tr><th>Ladder used</th><td contenteditable="true">1 kb / 100 bp</td></tr>
+    <tr><th>Loading volume</th><td contenteditable="true">5 µL</td></tr>
+    <tr><th>Voltage</th><td contenteditable="true"></td></tr>
+    <tr><th>Run time</th><td contenteditable="true"></td></tr>
+    <tr><th>GelDoc image file</th><td contenteditable="true"></td></tr>
+    <tr><th>Notes</th><td contenteditable="true"></td></tr>
+  </tbody>
+</table>
+
+<button class="export-btn" onclick="exportBenchRecord('bench-record-gel-electrophoresis', 'gel-electrophoresis-bench-record.png')">Export as PNG</button>
+
+---
+
+## Bench Notes
+
+<div class="bench-notes">
+  <textarea id="labNotes" placeholder="Type bench notes here. They autosave in this browser on this computer."></textarea>
+  <div class="toolbar">
+    <button type="button" id="clearNotes">Clear notes</button>
+    <span class="status" id="notesStatus">Notes are saved locally in this browser.</span>
+  </div>
+</div>
+
+---
+
+## Stop Points
+
+!!! danger "Stop and ask before:"
+    - Loading samples if the gel has not solidified completely.
+    - Running the gel if the chamber has too little 1X TAE to cover the gel.
+    - Continuing if samples appear to run in the wrong direction.
+    - Imaging if the stain used or imaging tray is unclear.
+
+## Safety Notes
+
+!!! danger "Gel stain and UV exposure"
+    Wear gloves when handling stained gels. Avoid skin contact with GelGreen- or GelRed-stained gels. Follow GelDoc safety procedures and do not expose skin or eyes to UV light.
+
+!!! warning "Waste"
+    Dispose of GelGreen- or GelRed-stained gels in the red biohazard bag.
+
+<script>
+(function () {
+  const trayCount = document.getElementById("trayCount");
+  const labNotes = document.getElementById("labNotes");
+  const clearNotes = document.getElementById("clearNotes");
+  const notesStatus = document.getElementById("notesStatus");
+  const notesStorageKey = "gel-electrophoresis-notes";
+
+  function setText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  }
+
+  function fmtMl(value) {
+    return (Number.isInteger(value) ? value : value.toFixed(1)) + " mL";
+  }
+
+  function fmtGram(value) {
+    return value.toFixed(2) + " g";
+  }
+
+  function fmtUl(value) {
+    return (Number.isInteger(value) ? value : value.toFixed(1)) + " µL";
+  }
+
+  function updateCalculator() {
+    const equivalents = Math.max(1, parseInt(trayCount.value, 10) || 1);
+    setText("gelTaeVolume", fmtMl(50 * equivalents));
+    setText("gelAgarose15", fmtGram(0.75 * equivalents));
+    setText("gelAgarose20", fmtGram(1 * equivalents));
+    setText("gelStainVolume", fmtUl(5 * equivalents));
+  }
+
+  function initNotes() {
+    try { labNotes.value = localStorage.getItem(notesStorageKey) || ""; } catch (e) {}
+    labNotes.addEventListener("input", function () {
+      try {
+        localStorage.setItem(notesStorageKey, labNotes.value);
+        notesStatus.textContent = "Saved locally in this browser.";
+      } catch (e) {
+        notesStatus.textContent = "Could not save notes.";
+      }
+    });
+    clearNotes.addEventListener("click", function () {
+      labNotes.value = "";
+      try {
+        localStorage.removeItem(notesStorageKey);
+        notesStatus.textContent = "Notes cleared.";
+      } catch (e) {}
+    });
+  }
+
+  trayCount.addEventListener("input", updateCalculator);
+  initNotes();
+  updateCalculator();
+})();
+</script>
