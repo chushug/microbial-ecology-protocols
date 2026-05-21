@@ -1,31 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-         <loc>https://chushug.github.io/microbial-ecology-protocols/</loc>
-         <lastmod>2026-05-17</lastmod>
-    </url>
-    <url>
-         <loc>https://chushug.github.io/microbial-ecology-protocols/manuals/ammonium-nitrate-assay/</loc>
-         <lastmod>2026-05-17</lastmod>
-    </url>
-    <url>
-         <loc>https://chushug.github.io/microbial-ecology-protocols/manuals/dna-extraction-96-powersoil/</loc>
-         <lastmod>2026-05-17</lastmod>
-    </url>
-    <url>
-         <loc>https://chushug.github.io/microbial-ecology-protocols/manuals/gel-electrophoresis/</loc>
-         <lastmod>2026-05-17</lastmod>
-    </url>
-    <url>
-         <loc>https://chushug.github.io/microbial-ecology-protocols/manuals/regular-pcr/</loc>
-         <lastmod>2026-05-17</lastmod>
-    </url>
-    <url>
-         <loc>https://chushug.github.io/microbial-ecology-protocols/manuals/rna-extraction-powersoil/</loc>
-         <lastmod>2026-05-17</lastmod>
-    </url>
-    <url>
-         <loc>https://chushug.github.io/microbial-ecology-protocols/manuals/soil-rna-dnase-cdna/</loc>
-         <lastmod>2026-05-17</lastmod>
-    </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/404.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/AGENTS.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/articles/ammonium-nitrate-assay.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/articles/dna-extraction-96-powersoil.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/articles/gel-electrophoresis.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/articles/index.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/articles/regular-pcr.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/articles/rna-extraction-powersoil.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/articles/soil-rna-dnase-cdna.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/authors.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/index.html</loc></url>
+<url><loc>https://chushug.github.io/microbial-ecology-protocols/reference/index.html</loc></url>
 </urlset>
+
