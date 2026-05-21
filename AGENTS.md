@@ -1,19 +1,25 @@
-# microbial-ecology-protocols — Project Guide for AI Assistants
+# microbial-ecology-protocols - Project Guide for AI Assistants
 
 ## What This Is
-A lab protocol site built with **MkDocs + Material theme**. Source files are Markdown; the site is deployed to GitHub Pages via `py -m mkdocs gh-deploy`.
+A lab protocol site now built primarily with **pkgdown**. The legacy **MkDocs + Material theme** source remains available as a fallback build path.
 
 ## Stack
-- MkDocs 1.x + mkdocs-material 9.x (Python)
-- No plugins beyond what is in `mkdocs.yml`
-- Custom CSS in `docs/stylesheets/extra.css`
-- Interactive features (calculators, checklists) are plain HTML/JS embedded inline in `.md` files
+- pkgdown 2.x, Bootstrap 5, and R Markdown vignettes
+- MkDocs 1.x + mkdocs-material 9.x remains available through `mkdocs.yml`
+- Source protocol Markdown remains under `docs/`
+- pkgdown article source is generated under `vignettes/` by `tools/sync-pkgdown-vignettes.R`
+- `tools/build-pkgdown-site.R` finds a local Pandoc, syncs sources, and runs `pkgdown::build_site()`
+- Custom pkgdown CSS and JavaScript are generated under `pkgdown/assets/`
+- Interactive features (calculators, checklists) are plain HTML/JS embedded inline in protocol files
 
 ## Adding a New Protocol
 
-1. Create `docs/<category>/<slug>.md` — use kebab-case, e.g. `docs/dna-extraction/powersoil-pro-96.md`
+1. Create `docs/<category>/<slug>.md` - use kebab-case, e.g. `docs/dna-extraction/powersoil-pro-96.md`
 2. Add a nav entry in `mkdocs.yml` under the appropriate section
 3. Add a card row to `docs/index.md` following the existing table format
+4. Add the slug to `manual_order` in `tools/sync-pkgdown-vignettes.R`
+5. Add the article to `_pkgdown.yml`
+6. Run `tools/build-pkgdown-site.R` to sync and build the pkgdown site
 
 ### Page front matter
 Every protocol page should start with:
@@ -31,7 +37,9 @@ The home page (`index.md`) always hides TOC.
 - `##` for major sections (Decision, Materials, Reagent Calculator, Part A/B/C, Bench Record, Bench Notes, Stop Points)
 - `###` for subsections within a part
 
-### Callout boxes → Material admonitions
+### Callout boxes
+Write callouts in the legacy MkDocs source as Material admonitions. The sync script converts them to Bootstrap alerts for pkgdown.
+
 | Original intent | Admonition type |
 |---|---|
 | Green tip / recommendation | `!!! tip` |
@@ -40,7 +48,7 @@ The home page (`index.md`) always hides TOC.
 | Blue info / background | `!!! info` |
 
 ### Interactive checklists
-Use raw HTML `<ul class="checklist">` with `<input type="checkbox">` — do **not** use Material's `- [x]` tasklist syntax because those are not interactive at runtime.
+Use raw HTML `<ul class="checklist">` with `<input type="checkbox">` - do **not** use Material's `- [x]` tasklist syntax because those are not interactive at runtime.
 
 ```html
 <ul class="checklist">
@@ -52,7 +60,7 @@ Use raw HTML `<ul class="checklist">` with `<input type="checkbox">` — do **no
 - Use `<span id="someId"></span>` placeholders in Markdown tables
 - Put all JS in a single `<script>` block at the bottom of the file, wrapped in an IIFE
 - Inputs: `<input type="number">` inside a `<div class="calculator-controls"><div class="control">` wrapper
-- CSS classes for layout are defined in `docs/stylesheets/extra.css` — reuse existing classes, don't add inline styles
+- CSS classes for layout are defined in `docs/stylesheets/extra.css` and converted for pkgdown by the sync script
 
 ### Summary facts strip
 Use `<div class="facts"><div class="fact"><strong>Label</strong><span id="..."></span></div>...</div>` at the top of the page for at-a-glance stats.
@@ -62,8 +70,10 @@ Use the `.bench-notes` wrapper with a `<textarea id="labNotes">` and a clear but
 
 ## Deployment
 ```bash
-py -m mkdocs serve          # local preview at http://127.0.0.1:8000/microbial-ecology-protocols/
-py -m mkdocs gh-deploy      # build and push to gh-pages branch → GitHub Pages
+Rscript tools/build-pkgdown-site.R   # sync sources and build pkgdown site into site/
+
+py -m mkdocs serve                  # legacy local preview
+py -m mkdocs gh-deploy              # legacy gh-pages deployment path
 ```
 
 ## File Naming
@@ -71,6 +81,7 @@ py -m mkdocs gh-deploy      # build and push to gh-pages branch → GitHub Pages
 - Source protocols in `.BulBot/Protocol/` are the authoritative lab record; this site is the rendered, web-friendly version.
 
 ## Git
-- Commit source files only; `site/` is gitignored
-- Branch: `main` for source; `gh-pages` is auto-managed by `mkdocs gh-deploy`
+- Commit source/config files and generated `vignettes/` or `pkgdown/assets/` updates needed for pkgdown builds
+- `site/` is gitignored
+- Branch: `main` for source; `gh-pages` can still be auto-managed by the legacy `mkdocs gh-deploy`
 - Remote: `https://github.com/chushug/microbial-ecology-protocols.git`

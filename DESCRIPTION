@@ -1,0 +1,15 @@
+Package: microbialecologyprotocols
+Title: Microbial Ecology Lab Protocols
+Version: 0.1.0
+Authors@R:
+    person("Chushu", "Gao", role = c("aut", "cre"), email = "chushu.gao@slu.edu")
+Description: Bench-ready microbial ecology lab protocols with reagent
+    calculators, interactive checklists, and bench record templates.
+License: CC BY 4.0
+URL: https://chushug.github.io/microbial-ecology-protocols/
+Encoding: UTF-8
+VignetteBuilder: knitr
+Suggests:
+    knitr,
+    pkgdown,
+    rmarkdown
