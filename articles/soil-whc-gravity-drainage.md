@@ -1,16 +1,17 @@
 # Soil Maximum Water Holding Capacity: Gravity Drainage Method
 
 Bench-ready protocol for measuring maximum water holding capacity (WHC)
-of sieved soil by gravity drainage through filter paper, then
-calculating water additions for incubation moisture targets.
+of sieved soil by gravity drainage through pre-weighed filter paper,
+drying the same filter-paper-plus-soil system, and calculating WHC by
+mass balance.
 
-**Soil input**50 g
+**System**Tin + filter + soil
 
 **Drainage**8-12 h
 
 **Drying**105 deg C
 
-**Common target**60% WHC
+**Output**WHC g/g
 
 ------------------------------------------------------------------------
 
@@ -23,10 +24,12 @@ overnight gravitational drainage. It is useful for setting incubation
 moisture as a consistent percentage of WHC across soils with different
 texture and organic matter.
 
-**Common incubation target**
+**Mass-balance setup**
 
-Aerobic carbon and nitrogen cycling incubations often use 40-60% WHC. A
-60% WHC target is widely used for aerobic microbial activity.
+Pre-weigh the filter paper and tin. After drainage, weigh the tin +
+filter paper + wet soil together, then dry that same system. This avoids
+scraping wet soil from the filter paper and keeps all soil in the
+measured system.
 
 **Consistency matters**
 
@@ -55,32 +58,27 @@ and pre-incubation handling can change the measured value.
 
 ## WHC Calculator
 
-Starting sieved soil mass (g)
+Filter paper empty mass, W_filter (g)
 
-Drained wet soil mass (g)
+Tin empty mass, W_tin (g)
 
-Oven-dry soil mass (g)
+Tin + filter + wet soil, W_wet_total (g)
 
-Target incubation WHC (%)
+Tin + filter + dry soil, W_dry_total (g)
 
-Incubation dry soil mass (g)
-
-Current water in incubation soil (g)
-
-Use gravimetric moisture from the same soil batch.
-
-| Calculation                                 |              Value |
-|---------------------------------------------|-------------------:|
-| Water retained after drainage               |            18.57 g |
-| WHC                                         | 0.373 g/g dry soil |
-| Target water at selected % WHC              |             2.24 g |
-| Water to add after current-water correction |             2.24 g |
-| Water to add per g dry soil                 |          0.224 g/g |
+| Calculation                   |                    Value |
+|-------------------------------|-------------------------:|
+| Dry soil mass, W_soil,dry     |                  49.85 g |
+| Wet soil mass, W_soil,wet     |                  68.42 g |
+| Water retained after drainage |                  18.57 g |
+| WHC                           | 0.373 g water/g dry soil |
+| Gravimetric water content     |                    37.3% |
 
 **Check mass entries**
 
-Drained wet mass should be greater than oven-dry mass. If water to add
-is negative, the soil is already wetter than the target.
+W_wet_total should be greater than W_dry_total, and both totals should
+be greater than W_tin + W_filter. If not, recheck labels, tare values,
+or sample transfer.
 
 ------------------------------------------------------------------------
 
@@ -93,8 +91,13 @@ Sieve field-moist or air-dried soil through a 2 mm sieve.
 Prepare one replicate per sample type. Run duplicates if sample
 variability is unknown.
 
-Fold Whatman No. 40 filter paper into a cone and seat it firmly in the
-funnel with no wall gaps.
+With the balance calibrated and zero-tared, weigh the dry filter paper
+and record empty filter mass as `W_filter`.
+
+Weigh the empty labeled drying tin and record tin mass as `W_tin`.
+
+Fold the pre-weighed Whatman No. 40 filter paper into a cone and seat it
+firmly in the funnel with no wall gaps.
 
 Wet the filter paper with a small volume of DI water to seal it against
 the funnel wall.
@@ -107,8 +110,7 @@ Allow excess water to drain completely before adding soil.
 
 *~10-20 min*
 
-With the balance calibrated and zero-tared, weigh 50 g sieved soil, or
-the chosen starting mass, into the funnel. Record mass as `m_soil`.
+Weigh the chosen starting mass of sieved soil into the prepared funnel.
 
 Slowly add DI water in small increments across the soil surface.
 
@@ -137,15 +139,15 @@ Do not disturb the funnel during drainage.
 
 ------------------------------------------------------------------------
 
-## Part D: Weigh Drained Soil
+## Part D: Weigh Wet Soil System
 
 *~10-20 min*
 
-After drainage, weigh the funnel plus moist soil and subtract
-funnel/filter tare, or transfer drained soil to a pre-weighed container
-and weigh soil alone. Record drained wet soil mass as `m_wet`.
+After drainage, transfer the wet filter paper and all retained wet soil
+together into the pre-weighed tin.
 
-Transfer soil to a labeled drying tin.
+Weigh the tin + filter paper + wet soil together and record as
+`W_wet_total`.
 
 ------------------------------------------------------------------------
 
@@ -153,60 +155,68 @@ Transfer soil to a labeled drying tin.
 
 *24 h or until stable*
 
-Dry soil at 105 deg C for at least 24 h.
+Dry the same tin + filter paper + soil system at 105 deg C for at least
+24 h.
 
-If needed, continue drying until mass is stable between two readings 1 h
-apart.
+Continue drying until mass is stable, such as two consecutive readings
+differing by less than 0.01 g.
 
-Cool in a desiccator for 20-30 min, then weigh and record oven-dry mass
-as `m_dry`.
+Cool in a desiccator for 20-30 min, then weigh and record tin + filter
+paper + dry soil as `W_dry_total`.
 
 ------------------------------------------------------------------------
 
 ## Calculation Notes
 
 ``` text
-WHC (g water / g dry soil) = (m_wet - m_dry) / m_dry
+W_soil,dry = W_dry_total - W_tin - W_filter
 
-Water to add (g) =
-(target WHC / 100) x WHC x incubation dry soil mass - current water
+W_soil,wet = W_wet_total - W_tin - W_filter
+
+Water retained = W_soil,wet - W_soil,dry
+
+WHC (g water / g dry soil) = Water retained / W_soil,dry
 ```
 
-Where `current water` is the water already present in the field-moist
-incubation soil, calculated from a separate gravimetric moisture
-determination on the same batch.
+This mass-balance approach avoids scraping soil from the filter paper.
+Any soil that remains attached to the filter paper is included in both
+the wet and dry total masses.
 
 **Example**
 
-| Parameter | Value |
-|----|---:|
-| Starting soil mass | 50.00 g |
-| Drained wet soil mass | 68.42 g |
-| Oven-dry soil mass | 49.85 g |
-| WHC | (68.42 - 49.85) / 49.85 = 0.373 g/g |
-| Water to add for 60% WHC per 10 g dry soil | 0.60 x 0.373 x 10 = 2.24 g |
+| Parameter   |                               Value |
+|-------------|------------------------------------:|
+| W_filter    |                              0.80 g |
+| W_tin       |                              2.50 g |
+| W_wet_total |                             71.72 g |
+| W_dry_total |                             53.15 g |
+| W_soil,wet  |       71.72 - 2.50 - 0.80 = 68.42 g |
+| W_soil,dry  |       53.15 - 2.50 - 0.80 = 49.85 g |
+| WHC         | (68.42 - 49.85) / 49.85 = 0.373 g/g |
 
 ------------------------------------------------------------------------
 
 ## Bench Record
 
-|                                 |                |
-|---------------------------------|----------------|
-| Sample ID                       |                |
-| Date prepared                   |                |
-| Operator                        |                |
-| Soil type / site                |                |
-| Sieve size                      | 2 mm           |
-| Filter paper                    | Whatman No. 40 |
-| m_soil air-dry or starting mass | 50.00 g        |
-| Water added for saturation      |                |
-| Drainage duration               | 8-12 h         |
-| m_wet after drainage            | 68.42 g        |
-| m_dry at 105 deg C              | 49.85 g        |
-| WHC                             | 0.373 g/g      |
-| Target incubation % WHC         | 60%            |
-| Water to add per g dry soil     | 0.224 g/g      |
-| Notes                           |                |
+|                            |                |
+|----------------------------|----------------|
+| Sample ID                  |                |
+| Date prepared              |                |
+| Operator                   |                |
+| Soil type / site           |                |
+| Sieve size                 | 2 mm           |
+| Filter paper type          | Whatman No. 40 |
+| W_filter                   | 0.80 g         |
+| W_tin                      | 2.50 g         |
+| Starting soil mass         |                |
+| Water added for saturation |                |
+| Drainage duration          | 8-12 h         |
+| W_wet_total                | 71.72 g        |
+| W_dry_total                | 53.15 g        |
+| W_soil,wet                 | 68.42 g        |
+| W_soil,dry                 | 49.85 g        |
+| WHC                        | 0.373 g/g      |
+| Notes                      |                |
 
 Export as PNG
 
@@ -229,8 +239,8 @@ Notes are saved locally in this browser.
 - Continuing if soil does not drain within 12 h.
 - Accepting duplicate WHC values that differ by more than 15% for the
   same soil.
-- Calculating incubation water additions without a gravimetric moisture
-  value for field-moist soil.
+- Separating wet soil from the filter paper before weighing, because
+  soil stuck to the filter paper will break mass balance.
 - Using a different filter paper type or funnel geometry without noting
   the change.
 

@@ -95,11 +95,12 @@
     
     
 <p>Bench-ready protocol for measuring maximum water holding capacity
-(WHC) of sieved soil by gravity drainage through filter paper, then
-calculating water additions for incubation moisture targets.</p>
+(WHC) of sieved soil by gravity drainage through pre-weighed filter
+paper, drying the same filter-paper-plus-soil system, and calculating
+WHC by mass balance.</p>
 <div class="facts">
 <div class="fact">
-<strong>Soil input</strong><span id="summarySoilMass">50 g</span>
+<strong>System</strong><span>Tin + filter + soil</span>
 </div>
 <div class="fact">
 <strong>Drainage</strong><span>8-12 h</span>
@@ -108,7 +109,7 @@ calculating water additions for incubation moisture targets.</p>
 <strong>Drying</strong><span>105 deg C</span>
 </div>
 <div class="fact">
-<strong>Common target</strong><span id="summaryTargetWhc">60% WHC</span>
+<strong>Output</strong><span id="summaryWhc">WHC g/g</span>
 </div>
 </div>
 <hr>
@@ -123,9 +124,11 @@ moisture as a consistent percentage of WHC across soils with different
 texture and organic matter.</p>
 </div>
 <div class="alert alert-success" role="alert">
-<p><strong>Common incubation target</strong></p>
-<p>Aerobic carbon and nitrogen cycling incubations often use 40-60% WHC.
-A 60% WHC target is widely used for aerobic microbial activity.</p>
+<p><strong>Mass-balance setup</strong></p>
+<p>Pre-weigh the filter paper and tin. After drainage, weigh the tin +
+filter paper + wet soil together, then dry that same system. This avoids
+scraping wet soil from the filter paper and keeps all soil in the
+measured system.</p>
 </div>
 <div class="alert alert-warning" role="alert">
 <p><strong>Consistency matters</strong></p>
@@ -159,32 +162,23 @@ filter paper</li>
 </h2>
 <div class="calculator-controls">
 <div class="control">
-<p><label for="soilMassInput">Starting sieved soil mass (g)</label>
-<input id="soilMassInput" type="number" min="0.01" step="0.01" value="50"></p>
-</div>
-<div class="control">
-<p><label for="wetMassInput">Drained wet soil mass (g)</label>
-<input id="wetMassInput" type="number" min="0.01" step="0.01" value="68.42"></p>
-</div>
-<div class="control">
-<p><label for="dryMassInput">Oven-dry soil mass (g)</label>
-<input id="dryMassInput" type="number" min="0.01" step="0.01" value="49.85"></p>
-</div>
-<div class="control">
-<p><label for="targetWhcInput">Target incubation WHC (%)</label>
-<input id="targetWhcInput" type="number" min="0" step="1" value="60"></p>
-</div>
-<div class="control">
-<p><label for="incubationDryMassInput">Incubation dry soil mass
+<p><label for="filterMassInput">Filter paper empty mass, W_filter
 (g)</label>
-<input id="incubationDryMassInput" type="number" min="0.01" step="0.01" value="10"></p>
+<input id="filterMassInput" type="number" min="0" step="0.0001" value="0.80"></p>
 </div>
 <div class="control">
-<label for="currentWaterInput">Current water in incubation soil
+<p><label for="tinMassInput">Tin empty mass, W_tin (g)</label>
+<input id="tinMassInput" type="number" min="0" step="0.0001" value="2.50"></p>
+</div>
+<div class="control">
+<p><label for="wetTotalInput">Tin + filter + wet soil, W_wet_total
 (g)</label>
-<input id="currentWaterInput" type="number" min="0" step="0.01" value="0"><p class="hint">
-Use gravimetric moisture from the same soil batch.
-</p>
+<input id="wetTotalInput" type="number" min="0.01" step="0.01" value="71.72"></p>
+</div>
+<div class="control">
+<p><label for="dryTotalInput">Tin + filter + dry soil, W_dry_total
+(g)</label>
+<input id="dryTotalInput" type="number" min="0.01" step="0.01" value="53.15"></p>
 </div>
 </div>
 <table class="table">
@@ -198,31 +192,33 @@ Use gravimetric moisture from the same soil batch.
 </tr></thead>
 <tbody>
 <tr class="odd">
+<td>Dry soil mass, W_soil,dry</td>
+<td align="right"><span id="drySoilMass">49.85 g</span></td>
+</tr>
+<tr class="even">
+<td>Wet soil mass, W_soil,wet</td>
+<td align="right"><span id="wetSoilMass">68.42 g</span></td>
+</tr>
+<tr class="odd">
 <td>Water retained after drainage</td>
 <td align="right"><span id="waterRetained">18.57 g</span></td>
 </tr>
 <tr class="even">
 <td>WHC</td>
-<td align="right"><span id="whcValue">0.373 g/g dry soil</span></td>
+<td align="right"><span id="whcValue">0.373 g water/g dry
+soil</span></td>
 </tr>
 <tr class="odd">
-<td>Target water at selected % WHC</td>
-<td align="right"><span id="targetWater">2.24 g</span></td>
-</tr>
-<tr class="even">
-<td>Water to add after current-water correction</td>
-<td align="right"><span id="waterToAdd">2.24 g</span></td>
-</tr>
-<tr class="odd">
-<td>Water to add per g dry soil</td>
-<td align="right"><span id="waterToAddPerG">0.224 g/g</span></td>
+<td>Gravimetric water content</td>
+<td align="right"><span id="gravWaterContent">37.3%</span></td>
 </tr>
 </tbody>
 </table>
 <div class="alert alert-warning" role="alert">
 <p><strong>Check mass entries</strong></p>
-<p>Drained wet mass should be greater than oven-dry mass. If water to
-add is negative, the soil is already wetter than the target.</p>
+<p>W_wet_total should be greater than W_dry_total, and both totals
+should be greater than W_tin + W_filter. If not, recheck labels, tare
+values, or sample transfer.</p>
 </div>
 <hr>
 </div>
@@ -240,8 +236,18 @@ a 2 mm sieve.</span>
 duplicates if sample variability is unknown.</span>
 </li>
 <li>
-<input type="checkbox"><span>Fold Whatman No. 40 filter paper into a
-cone and seat it firmly in the funnel with no wall gaps.</span>
+<input type="checkbox"><span>With the balance calibrated and zero-tared,
+weigh the dry filter paper and record empty filter mass as
+<code>W_filter</code>.</span>
+</li>
+<li>
+<input type="checkbox"><span>Weigh the empty labeled drying tin and
+record tin mass as <code>W_tin</code>.</span>
+</li>
+<li>
+<input type="checkbox"><span>Fold the pre-weighed Whatman No. 40 filter
+paper into a cone and seat it firmly in the funnel with no wall
+gaps.</span>
 </li>
 <li>
 <input type="checkbox"><span>Wet the filter paper with a small volume of
@@ -260,9 +266,8 @@ before adding soil.</span>
 <p><em>~10-20 min</em></p>
 <ul class="checklist">
 <li>
-<input type="checkbox"><span>With the balance calibrated and zero-tared,
-weigh 50 g sieved soil, or the chosen starting mass, into the funnel.
-Record mass as <code>m_soil</code>.</span>
+<input type="checkbox"><span>Weigh the chosen starting mass of sieved
+soil into the prepared funnel.</span>
 </li>
 <li>
 <input type="checkbox"><span>Slowly add DI water in small increments
@@ -306,19 +311,18 @@ drainage.</span>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="part-d-weigh-drained-soil">Part D: Weigh Drained Soil<a class="anchor" aria-label="anchor" href="#part-d-weigh-drained-soil"></a>
+<h2 id="part-d-weigh-wet-soil-system">Part D: Weigh Wet Soil System<a class="anchor" aria-label="anchor" href="#part-d-weigh-wet-soil-system"></a>
 </h2>
 <p><em>~10-20 min</em></p>
 <ul class="checklist">
 <li>
-<input type="checkbox"><span>After drainage, weigh the funnel plus moist
-soil and subtract funnel/filter tare, or transfer drained soil to a
-pre-weighed container and weigh soil alone. Record drained wet soil mass
-as <code>m_wet</code>.</span>
+<input type="checkbox"><span>After drainage, transfer the wet filter
+paper and all retained wet soil together into the pre-weighed
+tin.</span>
 </li>
 <li>
-<input type="checkbox"><span>Transfer soil to a labeled drying
-tin.</span>
+<input type="checkbox"><span>Weigh the tin + filter paper + wet soil
+together and record as <code>W_wet_total</code>.</span>
 </li>
 </ul>
 <hr>
@@ -329,16 +333,17 @@ tin.</span>
 <p><em>24 h or until stable</em></p>
 <ul class="checklist">
 <li>
-<input type="checkbox"><span>Dry soil at 105 deg C for at least 24
-h.</span>
+<input type="checkbox"><span>Dry the same tin + filter paper + soil
+system at 105 deg C for at least 24 h.</span>
 </li>
 <li>
-<input type="checkbox"><span>If needed, continue drying until mass is
-stable between two readings 1 h apart.</span>
+<input type="checkbox"><span>Continue drying until mass is stable, such
+as two consecutive readings differing by less than 0.01 g.</span>
 </li>
 <li>
 <input type="checkbox"><span>Cool in a desiccator for 20-30 min, then
-weigh and record oven-dry mass as <code>m_dry</code>.</span>
+weigh and record tin + filter paper + dry soil as
+<code>W_dry_total</code>.</span>
 </li>
 </ul>
 <hr>
@@ -346,43 +351,50 @@ weigh and record oven-dry mass as <code>m_dry</code>.</span>
 <div class="section level2">
 <h2 id="calculation-notes">Calculation Notes<a class="anchor" aria-label="anchor" href="#calculation-notes"></a>
 </h2>
-<pre class="text"><code>WHC (g water / g dry soil) = (m_wet - m_dry) / m_dry
+<pre class="text"><code>W_soil,dry = W_dry_total - W_tin - W_filter
 
-Water to add (g) =
-(target WHC / 100) x WHC x incubation dry soil mass - current water</code></pre>
-<p>Where <code>current water</code> is the water already present in the
-field-moist incubation soil, calculated from a separate gravimetric
-moisture determination on the same batch.</p>
+W_soil,wet = W_wet_total - W_tin - W_filter
+
+Water retained = W_soil,wet - W_soil,dry
+
+WHC (g water / g dry soil) = Water retained / W_soil,dry</code></pre>
+<p>This mass-balance approach avoids scraping soil from the filter
+paper. Any soil that remains attached to the filter paper is included in
+both the wet and dry total masses.</p>
 <p><strong>Example</strong></p>
 <table class="table">
-<colgroup>
-<col width="42%">
-<col width="57%">
-</colgroup>
 <thead><tr class="header">
 <th>Parameter</th>
 <th align="right">Value</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>Starting soil mass</td>
-<td align="right">50.00 g</td>
+<td>W_filter</td>
+<td align="right">0.80 g</td>
 </tr>
 <tr class="even">
-<td>Drained wet soil mass</td>
-<td align="right">68.42 g</td>
+<td>W_tin</td>
+<td align="right">2.50 g</td>
 </tr>
 <tr class="odd">
-<td>Oven-dry soil mass</td>
-<td align="right">49.85 g</td>
+<td>W_wet_total</td>
+<td align="right">71.72 g</td>
 </tr>
 <tr class="even">
+<td>W_dry_total</td>
+<td align="right">53.15 g</td>
+</tr>
+<tr class="odd">
+<td>W_soil,wet</td>
+<td align="right">71.72 - 2.50 - 0.80 = 68.42 g</td>
+</tr>
+<tr class="even">
+<td>W_soil,dry</td>
+<td align="right">53.15 - 2.50 - 0.80 = 49.85 g</td>
+</tr>
+<tr class="odd">
 <td>WHC</td>
 <td align="right">(68.42 - 49.85) / 49.85 = 0.373 g/g</td>
-</tr>
-<tr class="odd">
-<td>Water to add for 60% WHC per 10 g dry soil</td>
-<td align="right">0.60 x 0.373 x 10 = 2.24 g</td>
 </tr>
 </tbody>
 </table>
@@ -430,7 +442,7 @@ Sieve size
 </tr>
 <tr>
 <th>
-Filter paper
+Filter paper type
 </th>
 <td contenteditable="true">
 Whatman No. 40
@@ -438,10 +450,25 @@ Whatman No. 40
 </tr>
 <tr>
 <th>
-m_soil air-dry or starting mass
+W_filter
 </th>
 <td contenteditable="true">
-<span id="recordSoilMass">50.00 g</span>
+<span id="recordFilterMass">0.80 g</span>
+</td>
+</tr>
+<tr>
+<th>
+W_tin
+</th>
+<td contenteditable="true">
+<span id="recordTinMass">2.50 g</span>
+</td>
+</tr>
+<tr>
+<th>
+Starting soil mass
+</th>
+<td contenteditable="true">
 </td>
 </tr>
 <tr>
@@ -461,18 +488,34 @@ Drainage duration
 </tr>
 <tr>
 <th>
-m_wet after drainage
+W_wet_total
 </th>
 <td contenteditable="true">
-<span id="recordWetMass">68.42 g</span>
+<span id="recordWetTotal">71.72 g</span>
 </td>
 </tr>
 <tr>
 <th>
-m_dry at 105 deg C
+W_dry_total
 </th>
 <td contenteditable="true">
-<span id="recordDryMass">49.85 g</span>
+<span id="recordDryTotal">53.15 g</span>
+</td>
+</tr>
+<tr>
+<th>
+W_soil,wet
+</th>
+<td contenteditable="true">
+<span id="recordWetSoil">68.42 g</span>
+</td>
+</tr>
+<tr>
+<th>
+W_soil,dry
+</th>
+<td contenteditable="true">
+<span id="recordDrySoil">49.85 g</span>
 </td>
 </tr>
 <tr>
@@ -481,22 +524,6 @@ WHC
 </th>
 <td contenteditable="true">
 <span id="recordWhc">0.373 g/g</span>
-</td>
-</tr>
-<tr>
-<th>
-Target incubation % WHC
-</th>
-<td contenteditable="true">
-<span id="recordTargetWhc">60%</span>
-</td>
-</tr>
-<tr>
-<th>
-Water to add per g dry soil
-</th>
-<td contenteditable="true">
-<span id="recordWaterPerG">0.224 g/g</span>
 </td>
 </tr>
 <tr>
@@ -537,8 +564,8 @@ handled differently.</li>
 <li>Continuing if soil does not drain within 12 h.</li>
 <li>Accepting duplicate WHC values that differ by more than 15% for the
 same soil.</li>
-<li>Calculating incubation water additions without a gravimetric
-moisture value for field-moist soil.</li>
+<li>Separating wet soil from the filter paper before weighing, because
+soil stuck to the filter paper will break mass balance.</li>
 <li>Using a different filter paper type or funnel geometry without
 noting the change.</li>
 </ul>
@@ -560,12 +587,10 @@ CSIRO, Melbourne.</li>
 </ul>
 <script>
 (function () {
-  const soilMassInput = document.getElementById("soilMassInput");
-  const wetMassInput = document.getElementById("wetMassInput");
-  const dryMassInput = document.getElementById("dryMassInput");
-  const targetWhcInput = document.getElementById("targetWhcInput");
-  const incubationDryMassInput = document.getElementById("incubationDryMassInput");
-  const currentWaterInput = document.getElementById("currentWaterInput");
+  const filterMassInput = document.getElementById("filterMassInput");
+  const tinMassInput = document.getElementById("tinMassInput");
+  const wetTotalInput = document.getElementById("wetTotalInput");
+  const dryTotalInput = document.getElementById("dryTotalInput");
   const labNotes = document.getElementById("labNotes");
   const clearNotes = document.getElementById("clearNotes");
   const notesStatus = document.getElementById("notesStatus");
@@ -585,31 +610,30 @@ CSIRO, Melbourne.</li>
   }
 
   function updateWhc() {
-    const soil = value(soilMassInput, 50, 0.01);
-    const wet = value(wetMassInput, 68.42, 0.01);
-    const dry = value(dryMassInput, 49.85, 0.01);
-    const targetPct = value(targetWhcInput, 60, 0);
-    const incubationDry = value(incubationDryMassInput, 10, 0.01);
-    const currentWater = value(currentWaterInput, 0, 0);
-    const retained = wet - dry;
-    const whc = retained / dry;
-    const targetWater = whc * incubationDry * targetPct / 100;
-    const addWater = targetWater - currentWater;
-    const addPerG = addWater / incubationDry;
+    const filter = value(filterMassInput, 0.8, 0);
+    const tin = value(tinMassInput, 2.5, 0);
+    const wetTotal = value(wetTotalInput, 71.72, 0.01);
+    const dryTotal = value(dryTotalInput, 53.15, 0.01);
+    const tare = filter + tin;
+    const wetSoil = wetTotal - tare;
+    const drySoil = dryTotal - tare;
+    const retained = wetSoil - drySoil;
+    const whc = drySoil > 0 ? retained / drySoil : NaN;
+    const waterPct = Number.isFinite(whc) ? whc * 100 : NaN;
 
-    setText("summarySoilMass", fmtMass(soil));
-    setText("summaryTargetWhc", targetPct.toFixed(0) + "% WHC");
+    setText("summaryWhc", Number.isFinite(whc) ? whc.toFixed(3) + " g/g" : "Check");
+    setText("drySoilMass", fmtMass(drySoil));
+    setText("wetSoilMass", fmtMass(wetSoil));
     setText("waterRetained", fmtMass(retained));
     setText("whcValue", fmtRatio(whc) + " dry soil");
-    setText("targetWater", fmtMass(targetWater));
-    setText("waterToAdd", fmtMass(addWater));
-    setText("waterToAddPerG", fmtRatio(addPerG));
-    setText("recordSoilMass", fmtMass(soil));
-    setText("recordWetMass", fmtMass(wet));
-    setText("recordDryMass", fmtMass(dry));
+    setText("gravWaterContent", Number.isFinite(waterPct) ? waterPct.toFixed(1) + "%" : "Check");
+    setText("recordFilterMass", fmtMass(filter));
+    setText("recordTinMass", fmtMass(tin));
+    setText("recordWetTotal", fmtMass(wetTotal));
+    setText("recordDryTotal", fmtMass(dryTotal));
+    setText("recordWetSoil", fmtMass(wetSoil));
+    setText("recordDrySoil", fmtMass(drySoil));
     setText("recordWhc", fmtRatio(whc));
-    setText("recordTargetWhc", targetPct.toFixed(0) + "%");
-    setText("recordWaterPerG", fmtRatio(addPerG));
   }
 
   function initNotes() {
@@ -631,7 +655,7 @@ CSIRO, Melbourne.</li>
     });
   }
 
-  [soilMassInput, wetMassInput, dryMassInput, targetWhcInput, incubationDryMassInput, currentWaterInput].forEach(function (input) {
+  [filterMassInput, tinMassInput, wetTotalInput, dryTotalInput].forEach(function (input) {
     input.addEventListener("input", updateWhc);
   });
 
