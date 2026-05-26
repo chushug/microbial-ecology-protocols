@@ -34,13 +34,18 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-bench-manuals" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Bench Manuals</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-bench-manuals"><li><a class="dropdown-item" href="articles/dna-extraction-96-powersoil.html">Soil DNA Extraction (96-well)</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-bench-protocols" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Bench Protocols</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-bench-protocols"><li><a class="dropdown-item" href="articles/dna-extraction-96-powersoil.html">Soil DNA Extraction (96-well)</a></li>
     <li><a class="dropdown-item" href="articles/rna-extraction-powersoil.html">Soil RNA Extraction</a></li>
     <li><a class="dropdown-item" href="articles/soil-rna-dnase-cdna.html">Soil RNA DNase &amp; cDNA Synthesis</a></li>
     <li><a class="dropdown-item" href="articles/gel-electrophoresis.html">Agarose Gel Electrophoresis</a></li>
     <li><a class="dropdown-item" href="articles/regular-pcr.html">Regular PCR</a></li>
     <li><a class="dropdown-item" href="articles/ammonium-nitrate-assay.html">Ammonium and Nitrate Assay</a></li>
+    <li><a class="dropdown-item" href="articles/soil-whc-gravity-drainage.html">Soil WHC Gravity Drainage</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-workflow-interpretation" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Workflow &amp; Interpretation</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-workflow-interpretation"><li><a class="dropdown-item" href="articles/gene-cloning-qpcr-standards.html">Gene Cloning &amp; qPCR Standards</a></li>
   </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json"></form></li>
@@ -83,6 +88,7 @@
 <h2 id="adding-a-new-protocol">Adding a New Protocol<a class="anchor" aria-label="anchor" href="#adding-a-new-protocol"></a></h2>
 <ol style="list-style-type: decimal"><li>Create <code>docs/&lt;category&gt;/&lt;slug&gt;.md</code> - use kebab-case, e.g. <code>docs/dna-extraction/powersoil-pro-96.md</code>
 </li>
+<li>Classify the page as either a bench protocol or a workflow/interpretation guide</li>
 <li>Add a nav entry in <code>mkdocs.yml</code> under the appropriate section</li>
 <li>Add a card row to <code>docs/index.md</code> following the existing table format</li>
 <li>Add the slug to <code>manual_order</code> in <code>tools/sync-pkgdown-vignettes.R</code>
@@ -91,6 +97,11 @@
 </li>
 <li>Run <code>tools/build-pkgdown-site.R</code> to sync and build the pkgdown site</li>
 </ol><div class="section level3">
+<h3 id="page-categories">Page Categories<a class="anchor" aria-label="anchor" href="#page-categories"></a></h3>
+<ul><li>Bench Protocols: direct step-by-step procedures meant to be followed at the bench.</li>
+<li>Workflow &amp; Interpretation Guides: broader experiment guides for rationale, planning, QC interpretation, calculations, troubleshooting, and downstream decisions.</li>
+</ul></div>
+<div class="section level3">
 <h3 id="page-front-matter">Page front matter<a class="anchor" aria-label="anchor" href="#page-front-matter"></a></h3>
 <p>Every protocol page should start with:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="pp">---</span></span>
