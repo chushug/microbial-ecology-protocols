@@ -133,13 +133,11 @@ Cycle count
 | 5    | Final extension      | 72°C        | 5:00 min |
 | 6    | Final hold / storage | 12°C        | Hold     |
 
-Confirm the program name matches the primer set or assay.
+Open or create the thermal cycler program for the primer set or assay,
+then enter the assay-specific annealing temperature and cycle count.
 
-Enter the assay-specific annealing temperature.
-
-Enter the cycle count.
-
-Confirm final extension and hold settings before starting the run.
+Review the final extension and hold settings in the same program, then
+start the run.
 
 ------------------------------------------------------------------------
 

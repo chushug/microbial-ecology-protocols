@@ -659,8 +659,8 @@ Where:
 
 ### Aliquot qPCR Standards
 
-Confirm that *E. coli* stock, plasmid stock, and standard stock tubes
-are available.
+Gather the required *E. coli* stock, plasmid stock, and standard stock
+tubes before dilution.
 
 Dilute plasmid stock to a final concentration of 2-4 ng/uL, using the
 calculator above when helpful.

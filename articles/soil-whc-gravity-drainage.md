@@ -93,8 +93,6 @@ Sieve field-moist or air-dried soil through a 2 mm sieve.
 Prepare one replicate per sample type. Run duplicates if sample
 variability is unknown.
 
-Confirm the balance is calibrated and zero-tared.
-
 Fold Whatman No. 40 filter paper into a cone and seat it firmly in the
 funnel with no wall gaps.
 
@@ -109,8 +107,8 @@ Allow excess water to drain completely before adding soil.
 
 *~10-20 min*
 
-Weigh 50 g sieved soil, or the chosen starting mass, into the funnel.
-Record mass as `m_soil`.
+With the balance calibrated and zero-tared, weigh 50 g sieved soil, or
+the chosen starting mass, into the funnel. Record mass as `m_soil`.
 
 Slowly add DI water in small increments across the soil surface.
 
@@ -131,12 +129,11 @@ evaporation.
 
 *8-12 h elapsed*
 
-Allow the soil to drain at room temperature for at least 8 h. Overnight
-drainage is preferred.
+Allow the soil to drain at room temperature for at least 8 h, recording
+the drainage start and end time when the funnel is removed from the
+stand. Overnight drainage is preferred.
 
 Do not disturb the funnel during drainage.
-
-Record the start and end time for drainage.
 
 ------------------------------------------------------------------------
 
@@ -146,9 +143,7 @@ Record the start and end time for drainage.
 
 After drainage, weigh the funnel plus moist soil and subtract
 funnel/filter tare, or transfer drained soil to a pre-weighed container
-and weigh soil alone.
-
-Record drained wet soil mass as `m_wet`.
+and weigh soil alone. Record drained wet soil mass as `m_wet`.
 
 Transfer soil to a labeled drying tin.
 
@@ -163,9 +158,8 @@ Dry soil at 105 deg C for at least 24 h.
 If needed, continue drying until mass is stable between two readings 1 h
 apart.
 
-Cool in a desiccator for 20-30 min before weighing.
-
-Record oven-dry mass as `m_dry`.
+Cool in a desiccator for 20-30 min, then weigh and record oven-dry mass
+as `m_dry`.
 
 ------------------------------------------------------------------------
 
