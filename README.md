@@ -15,6 +15,7 @@ Bench-ready lab protocols with reagent calculators, interactive step checklists,
 | [Regular PCR](https://chushug.github.io/microbial-ecology-protocols/articles/regular-pcr.html) | PCR |
 | [Ammonium and Nitrate Colorimetry Assay](https://chushug.github.io/microbial-ecology-protocols/articles/ammonium-nitrate-assay.html) | Soil chemistry |
 | [Gene Cloning and qPCR Standard Preparation](https://chushug.github.io/microbial-ecology-protocols/articles/gene-cloning-qpcr-standards.html) | Cloning & qPCR standards |
+| [Soil Maximum Water Holding Capacity](https://chushug.github.io/microbial-ecology-protocols/articles/soil-whc-gravity-drainage.html) | Soil moisture setup |
 
 ## Build the Website
 

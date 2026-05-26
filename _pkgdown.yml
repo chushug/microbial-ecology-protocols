@@ -52,6 +52,8 @@ navbar:
         href: articles/ammonium-nitrate-assay.html
       - text: Gene Cloning & qPCR Standards
         href: articles/gene-cloning-qpcr-standards.html
+      - text: Soil WHC Gravity Drainage
+        href: articles/soil-whc-gravity-drainage.html
     github:
       icon: fa-github
       href: https://github.com/chushug/microbial-ecology-protocols
@@ -68,3 +70,4 @@ articles:
   - regular-pcr
   - ammonium-nitrate-assay
   - gene-cloning-qpcr-standards
+  - soil-whc-gravity-drainage

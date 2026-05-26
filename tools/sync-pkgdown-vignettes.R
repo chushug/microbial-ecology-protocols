@@ -20,7 +20,8 @@ manual_order <- c(
   "gel-electrophoresis",
   "regular-pcr",
   "ammonium-nitrate-assay",
-  "gene-cloning-qpcr-standards"
+  "gene-cloning-qpcr-standards",
+  "soil-whc-gravity-drainage"
 )
 
 alert_classes <- c(

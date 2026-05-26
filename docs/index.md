@@ -25,7 +25,8 @@ Step-by-step bench references with interactive checklists and reagent calculator
 | [Regular PCR](manuals/regular-pcr.md) | PCR master mix | ~1.5-2.5 h |
 | [Ammonium and Nitrate Colorimetry Assay](manuals/ammonium-nitrate-assay.md) | 1M KCl extraction + SpectraMax ABS Plus | ~1-2 d |
 | [Gene Cloning and qPCR Standard Preparation](manuals/gene-cloning-qpcr-standards.md) | TA cloning + Qubit + plasmid standards | ~4-7 d |
+| [Soil Maximum Water Holding Capacity](manuals/soil-whc-gravity-drainage.md) | Gravity drainage + 105 deg C dry mass | ~1-2 d |
 
 ---
 
-*Full workflow documents now include cloning-to-standard preparation for qPCR standard stocks.*
+*Full workflow documents now include cloning-to-standard preparation for qPCR standard stocks and soil WHC setup for incubation moisture targets.*
