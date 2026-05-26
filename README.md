@@ -14,6 +14,7 @@ Bench-ready lab protocols with reagent calculators, interactive step checklists,
 | [Agarose Gel Electrophoresis](https://chushug.github.io/microbial-ecology-protocols/articles/gel-electrophoresis.html) | Gel electrophoresis |
 | [Regular PCR](https://chushug.github.io/microbial-ecology-protocols/articles/regular-pcr.html) | PCR |
 | [Ammonium and Nitrate Colorimetry Assay](https://chushug.github.io/microbial-ecology-protocols/articles/ammonium-nitrate-assay.html) | Soil chemistry |
+| [Gene Cloning and qPCR Standard Preparation](https://chushug.github.io/microbial-ecology-protocols/articles/gene-cloning-qpcr-standards.html) | Cloning & qPCR standards |
 
 ## Build the Website
 

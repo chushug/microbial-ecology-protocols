@@ -50,6 +50,8 @@ navbar:
         href: articles/regular-pcr.html
       - text: Ammonium and Nitrate Assay
         href: articles/ammonium-nitrate-assay.html
+      - text: Gene Cloning & qPCR Standards
+        href: articles/gene-cloning-qpcr-standards.html
     github:
       icon: fa-github
       href: https://github.com/chushug/microbial-ecology-protocols
@@ -65,3 +67,4 @@ articles:
   - gel-electrophoresis
   - regular-pcr
   - ammonium-nitrate-assay
+  - gene-cloning-qpcr-standards

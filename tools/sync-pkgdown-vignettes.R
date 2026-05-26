@@ -19,7 +19,8 @@ manual_order <- c(
   "soil-rna-dnase-cdna",
   "gel-electrophoresis",
   "regular-pcr",
-  "ammonium-nitrate-assay"
+  "ammonium-nitrate-assay",
+  "gene-cloning-qpcr-standards"
 )
 
 alert_classes <- c(
@@ -188,6 +189,14 @@ sync_vignettes <- function() {
     if (!file.exists(source_path)) stop("Missing manual: ", source_path)
     vignette_path <- file.path(VIGNETTES_DIR, paste0(slug, ".Rmd"))
     write_utf8(as_vignette(source_path, slug), vignette_path)
+
+    source_assets <- file.path(MANUALS_DIR, paste0(slug, "_assets"))
+    vignette_assets <- file.path(VIGNETTES_DIR, paste0(slug, "_assets"))
+    if (dir.exists(source_assets)) {
+      if (dir.exists(vignette_assets)) unlink(vignette_assets, recursive = TRUE, force = TRUE)
+      copied <- file.copy(source_assets, VIGNETTES_DIR, recursive = TRUE)
+      if (!copied) stop("Could not copy manual assets for: ", slug)
+    }
   }
 }
 
