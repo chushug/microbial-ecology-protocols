@@ -1,10 +1,10 @@
 # Microbial Ecology Lab Protocols
 
-Bench-ready lab protocols with reagent calculators, interactive step checklists, and bench record templates.
+Bench-ready lab protocols and broader workflow guides for microbial ecology experiments.
 
 **[View the protocol site ->](https://chushug.github.io/microbial-ecology-protocols/)**
 
-## Protocols
+## Bench Protocols
 
 | Protocol | Category |
 |---|---|
@@ -14,8 +14,13 @@ Bench-ready lab protocols with reagent calculators, interactive step checklists,
 | [Agarose Gel Electrophoresis](https://chushug.github.io/microbial-ecology-protocols/articles/gel-electrophoresis.html) | Gel electrophoresis |
 | [Regular PCR](https://chushug.github.io/microbial-ecology-protocols/articles/regular-pcr.html) | PCR |
 | [Ammonium and Nitrate Colorimetry Assay](https://chushug.github.io/microbial-ecology-protocols/articles/ammonium-nitrate-assay.html) | Soil chemistry |
-| [Gene Cloning and qPCR Standard Preparation](https://chushug.github.io/microbial-ecology-protocols/articles/gene-cloning-qpcr-standards.html) | Cloning & qPCR standards |
 | [Soil Maximum Water Holding Capacity](https://chushug.github.io/microbial-ecology-protocols/articles/soil-whc-gravity-drainage.html) | Soil moisture setup |
+
+## Workflow & Interpretation Guides
+
+| Guide | Category |
+|---|---|
+| [Gene Cloning and qPCR Standard Preparation](https://chushug.github.io/microbial-ecology-protocols/articles/gene-cloning-qpcr-standards.html) | Cloning & qPCR standards |
 
 ## Build the Website
 

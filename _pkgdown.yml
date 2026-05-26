@@ -32,11 +32,11 @@ template:
 
 navbar:
   structure:
-    left: [home, articles]
+    left: [home, bench, guides]
     right: [search, github]
   components:
-    articles:
-      text: Bench Manuals
+    bench:
+      text: Bench Protocols
       menu:
       - text: Soil DNA Extraction (96-well)
         href: articles/dna-extraction-96-powersoil.html
@@ -50,18 +50,21 @@ navbar:
         href: articles/regular-pcr.html
       - text: Ammonium and Nitrate Assay
         href: articles/ammonium-nitrate-assay.html
-      - text: Gene Cloning & qPCR Standards
-        href: articles/gene-cloning-qpcr-standards.html
       - text: Soil WHC Gravity Drainage
         href: articles/soil-whc-gravity-drainage.html
+    guides:
+      text: Workflow & Interpretation
+      menu:
+      - text: Gene Cloning & qPCR Standards
+        href: articles/gene-cloning-qpcr-standards.html
     github:
       icon: fa-github
       href: https://github.com/chushug/microbial-ecology-protocols
       aria-label: GitHub
 
 articles:
-- title: Bench Manuals
-  navbar: Bench Manuals
+- title: Bench Protocols
+  navbar: Bench Protocols
   contents:
   - dna-extraction-96-powersoil
   - rna-extraction-powersoil
@@ -69,5 +72,8 @@ articles:
   - gel-electrophoresis
   - regular-pcr
   - ammonium-nitrate-assay
-  - gene-cloning-qpcr-standards
   - soil-whc-gravity-drainage
+- title: Workflow & Interpretation Guides
+  navbar: Workflow & Interpretation
+  contents:
+  - gene-cloning-qpcr-standards

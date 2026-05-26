@@ -15,11 +15,16 @@ A lab protocol site now built primarily with **pkgdown**. The legacy **MkDocs + 
 ## Adding a New Protocol
 
 1. Create `docs/<category>/<slug>.md` - use kebab-case, e.g. `docs/dna-extraction/powersoil-pro-96.md`
-2. Add a nav entry in `mkdocs.yml` under the appropriate section
-3. Add a card row to `docs/index.md` following the existing table format
-4. Add the slug to `manual_order` in `tools/sync-pkgdown-vignettes.R`
-5. Add the article to `_pkgdown.yml`
-6. Run `tools/build-pkgdown-site.R` to sync and build the pkgdown site
+2. Classify the page as either a bench protocol or a workflow/interpretation guide
+3. Add a nav entry in `mkdocs.yml` under the appropriate section
+4. Add a card row to `docs/index.md` following the existing table format
+5. Add the slug to `manual_order` in `tools/sync-pkgdown-vignettes.R`
+6. Add the article to `_pkgdown.yml`
+7. Run `tools/build-pkgdown-site.R` to sync and build the pkgdown site
+
+### Page Categories
+- Bench Protocols: direct step-by-step procedures meant to be followed at the bench.
+- Workflow & Interpretation Guides: broader experiment guides for rationale, planning, QC interpretation, calculations, troubleshooting, and downstream decisions.
 
 ### Page front matter
 Every protocol page should start with:

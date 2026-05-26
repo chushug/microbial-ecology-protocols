@@ -30,12 +30,13 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Bench Manuals:
+  - Bench Protocols:
     - Soil DNA Extraction (96-well): manuals/dna-extraction-96-powersoil.md
     - Soil RNA Extraction: manuals/rna-extraction-powersoil.md
     - Soil RNA DNase & cDNA Synthesis: manuals/soil-rna-dnase-cdna.md
     - Agarose Gel Electrophoresis: manuals/gel-electrophoresis.md
     - Regular PCR: manuals/regular-pcr.md
     - Ammonium and Nitrate Assay: manuals/ammonium-nitrate-assay.md
-    - Gene Cloning & qPCR Standards: manuals/gene-cloning-qpcr-standards.md
     - Soil WHC Gravity Drainage: manuals/soil-whc-gravity-drainage.md
+  - Workflow & Interpretation:
+    - Gene Cloning & qPCR Standards: manuals/gene-cloning-qpcr-standards.md
