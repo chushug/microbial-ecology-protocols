@@ -530,7 +530,7 @@ Where:
 ### Aliquot qPCR Standards
 
 <ul class="checklist">
-  <li><input type="checkbox"><span>Confirm that *E. coli* stock, plasmid stock, and standard stock tubes are available.</span></li>
+  <li><input type="checkbox"><span>Gather the required *E. coli* stock, plasmid stock, and standard stock tubes before dilution.</span></li>
   <li><input type="checkbox"><span>Dilute plasmid stock to a final concentration of 2-4 ng/uL, using the calculator above when helpful.</span></li>
   <li><input type="checkbox"><span>Aliquot 20 uL plasmid standard into 0.5 mL microcentrifuge tubes.</span></li>
   <li><input type="checkbox"><span>Prepare 40-50 qPCR standard tubes when making the routine standard stock set.</span></li>
@@ -776,4 +776,3 @@ These notes came from `gene cloning protocol.pdf`. Use them as a quick reference
   updateStandardDilution();
 })();
 </script>
-

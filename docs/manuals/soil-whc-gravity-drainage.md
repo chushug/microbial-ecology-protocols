@@ -96,7 +96,6 @@ Bench-ready protocol for measuring maximum water holding capacity (WHC) of sieve
 <ul class="checklist">
   <li><input type="checkbox"><span>Sieve field-moist or air-dried soil through a 2 mm sieve.</span></li>
   <li><input type="checkbox"><span>Prepare one replicate per sample type. Run duplicates if sample variability is unknown.</span></li>
-  <li><input type="checkbox"><span>Confirm the balance is calibrated and zero-tared.</span></li>
   <li><input type="checkbox"><span>Fold Whatman No. 40 filter paper into a cone and seat it firmly in the funnel with no wall gaps.</span></li>
   <li><input type="checkbox"><span>Wet the filter paper with a small volume of DI water to seal it against the funnel wall.</span></li>
   <li><input type="checkbox"><span>Allow excess water to drain completely before adding soil.</span></li>
@@ -109,7 +108,7 @@ Bench-ready protocol for measuring maximum water holding capacity (WHC) of sieve
 *~10-20 min*
 
 <ul class="checklist">
-  <li><input type="checkbox"><span>Weigh 50 g sieved soil, or the chosen starting mass, into the funnel. Record mass as <code>m_soil</code>.</span></li>
+  <li><input type="checkbox"><span>With the balance calibrated and zero-tared, weigh 50 g sieved soil, or the chosen starting mass, into the funnel. Record mass as <code>m_soil</code>.</span></li>
   <li><input type="checkbox"><span>Slowly add DI water in small increments across the soil surface.</span></li>
   <li><input type="checkbox"><span>Stop when the soil is visibly saturated and water just begins to emerge from the funnel tip.</span></li>
   <li><input type="checkbox"><span>For mineral soils, expect roughly 50-80 mL water, but use visible saturation rather than a fixed volume.</span></li>
@@ -124,9 +123,8 @@ Bench-ready protocol for measuring maximum water holding capacity (WHC) of sieve
 *8-12 h elapsed*
 
 <ul class="checklist">
-  <li><input type="checkbox"><span>Allow the soil to drain at room temperature for at least 8 h. Overnight drainage is preferred.</span></li>
+  <li><input type="checkbox"><span>Allow the soil to drain at room temperature for at least 8 h, recording the drainage start and end time when the funnel is removed from the stand. Overnight drainage is preferred.</span></li>
   <li><input type="checkbox"><span>Do not disturb the funnel during drainage.</span></li>
-  <li><input type="checkbox"><span>Record the start and end time for drainage.</span></li>
 </ul>
 
 ---
@@ -136,8 +134,7 @@ Bench-ready protocol for measuring maximum water holding capacity (WHC) of sieve
 *~10-20 min*
 
 <ul class="checklist">
-  <li><input type="checkbox"><span>After drainage, weigh the funnel plus moist soil and subtract funnel/filter tare, or transfer drained soil to a pre-weighed container and weigh soil alone.</span></li>
-  <li><input type="checkbox"><span>Record drained wet soil mass as <code>m_wet</code>.</span></li>
+  <li><input type="checkbox"><span>After drainage, weigh the funnel plus moist soil and subtract funnel/filter tare, or transfer drained soil to a pre-weighed container and weigh soil alone. Record drained wet soil mass as <code>m_wet</code>.</span></li>
   <li><input type="checkbox"><span>Transfer soil to a labeled drying tin.</span></li>
 </ul>
 
@@ -150,8 +147,7 @@ Bench-ready protocol for measuring maximum water holding capacity (WHC) of sieve
 <ul class="checklist">
   <li><input type="checkbox"><span>Dry soil at 105 deg C for at least 24 h.</span></li>
   <li><input type="checkbox"><span>If needed, continue drying until mass is stable between two readings 1 h apart.</span></li>
-  <li><input type="checkbox"><span>Cool in a desiccator for 20-30 min before weighing.</span></li>
-  <li><input type="checkbox"><span>Record oven-dry mass as <code>m_dry</code>.</span></li>
+  <li><input type="checkbox"><span>Cool in a desiccator for 20-30 min, then weigh and record oven-dry mass as <code>m_dry</code>.</span></li>
 </ul>
 
 ---
@@ -315,4 +311,3 @@ Where `current water` is the water already present in the field-moist incubation
   updateWhc();
 })();
 </script>
-

@@ -61,6 +61,8 @@ Use raw HTML `<ul class="checklist">` with `<input type="checkbox">` - do **not*
 </ul>
 ```
 
+Checklist steps should be real bench actions. Merge routine setup checks such as balance leveling, zero/tare, program-name confirmation, plate orientation, reagent thaw status, or instrument readiness into the weighing, setup, loading, or start-run step they protect. Do not make those checks standalone todo items unless the check can stop the workflow.
+
 ### Reagent calculators
 - Use `<span id="someId"></span>` placeholders in Markdown tables
 - Put all JS in a single `<script>` block at the bottom of the file, wrapped in an IIFE

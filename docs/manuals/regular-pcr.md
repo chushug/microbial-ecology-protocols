@@ -134,10 +134,8 @@ Bench manual and fillable template for routine endpoint PCR setup, thermocycler 
 | 6 | Final hold / storage | 12°C | Hold |
 
 <ul class="checklist">
-  <li><input type="checkbox"><span>Confirm the program name matches the primer set or assay.</span></li>
-  <li><input type="checkbox"><span>Enter the assay-specific annealing temperature.</span></li>
-  <li><input type="checkbox"><span>Enter the cycle count.</span></li>
-  <li><input type="checkbox"><span>Confirm final extension and hold settings before starting the run.</span></li>
+  <li><input type="checkbox"><span>Open or create the thermal cycler program for the primer set or assay, then enter the assay-specific annealing temperature and cycle count.</span></li>
+  <li><input type="checkbox"><span>Review the final extension and hold settings in the same program, then start the run.</span></li>
 </ul>
 
 ---
