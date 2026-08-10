@@ -1,16 +1,11 @@
 # Microbial Ecology Lab Protocols
 
-Bench-ready lab protocols and broader workflow guides for microbial
-ecology experiments.
-
-**[View the protocol site
--\>](https://chushug.github.io/microbial-ecology-protocols/)**
-
 ## Bench Protocols
 
 | Protocol | Category |
 |----|----|
 | [Soil DNA Extraction (96-well)](https://chushug.github.io/microbial-ecology-protocols/articles/dna-extraction-96-powersoil.html) | DNA extraction |
+| [Soil DNA Extraction (PowerLyzer)](https://chushug.github.io/microbial-ecology-protocols/articles/dna-extraction-powerlyzer-powersoil.html) | DNA extraction |
 | [Soil RNA Extraction](https://chushug.github.io/microbial-ecology-protocols/articles/rna-extraction-powersoil.html) | RNA extraction |
 | [Soil RNA DNase Removal & cDNA Synthesis](https://chushug.github.io/microbial-ecology-protocols/articles/soil-rna-dnase-cdna.html) | RNA & cDNA |
 | [Agarose Gel Electrophoresis](https://chushug.github.io/microbial-ecology-protocols/articles/gel-electrophoresis.html) | Gel electrophoresis |
@@ -24,21 +19,18 @@ ecology experiments.
 |----|----|
 | [Gene Cloning and qPCR Standard Preparation](https://chushug.github.io/microbial-ecology-protocols/articles/gene-cloning-qpcr-standards.html) | Cloning & qPCR standards |
 
-## Build the Website
-
-The current primary build uses pkgdown.
-
-``` powershell
-& 'C:\Program Files\R\bin\x64\Rscript.exe' tools/build-pkgdown-site.R
-```
-
-The generated pkgdown site is written to `site/`.
-
 ## Built With
 
 [pkgdown](https://pkgdown.r-lib.org/) with Bootstrap 5.
 
 ## Update Log
+
+### 2026-08-10
+
+- Added the DNeasy PowerLyzer PowerSoil individual-spin-column DNA
+  extraction protocol and linked it from the bench-protocol table and
+  navigation.
+- Published the refreshed pkgdown site to GitHub Pages.
 
 ### 2026-05-21
 
