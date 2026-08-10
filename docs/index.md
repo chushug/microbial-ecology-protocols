@@ -19,6 +19,7 @@ Step-by-step references for running an assay or procedure at the bench.
 | Manual | Kit | Elapsed |
 |---|---|---|
 | [Soil DNA Extraction (96-well)](manuals/dna-extraction-96-powersoil.md) | DNeasy 96 PowerSoil Pro | ~2-3 h |
+| [Soil DNA Extraction (PowerLyzer)](manuals/dna-extraction-powerlyzer-powersoil.md) | DNeasy PowerLyzer PowerSoil | ~30 min |
 | [Soil RNA Extraction](manuals/rna-extraction-powersoil.md) | RNeasy PowerSoil Total RNA | ~2.5-3.5 h |
 | [Soil RNA DNase Removal & cDNA Synthesis](manuals/soil-rna-dnase-cdna.md) | TURBO DNA-free + SuperScript IV | ~2.5-4 h |
 | [Agarose Gel Electrophoresis](manuals/gel-electrophoresis.md) | GelGreen / GelRed | ~25-60 min |

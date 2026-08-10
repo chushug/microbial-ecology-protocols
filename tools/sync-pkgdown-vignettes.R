@@ -15,6 +15,7 @@ dir.create(ASSETS_DIR, recursive = TRUE, showWarnings = FALSE)
 
 manual_order <- c(
   "dna-extraction-96-powersoil",
+  "dna-extraction-powerlyzer-powersoil",
   "rna-extraction-powersoil",
   "soil-rna-dnase-cdna",
   "gel-electrophoresis",

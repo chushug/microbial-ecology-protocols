@@ -40,6 +40,8 @@ navbar:
       menu:
       - text: Soil DNA Extraction (96-well)
         href: articles/dna-extraction-96-powersoil.html
+      - text: Soil DNA Extraction (PowerLyzer)
+        href: articles/dna-extraction-powerlyzer-powersoil.html
       - text: Soil RNA Extraction
         href: articles/rna-extraction-powersoil.html
       - text: Soil RNA DNase & cDNA Synthesis
@@ -67,6 +69,7 @@ articles:
   navbar: Bench Protocols
   contents:
   - dna-extraction-96-powersoil
+  - dna-extraction-powerlyzer-powersoil
   - rna-extraction-powersoil
   - soil-rna-dnase-cdna
   - gel-electrophoresis

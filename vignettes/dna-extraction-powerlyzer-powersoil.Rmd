@@ -1,0 +1,203 @@
+---
+title: "Soil DNA Extraction - DNeasy PowerLyzer PowerSoil"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Soil DNA Extraction - DNeasy PowerLyzer PowerSoil}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Bench-ready protocol for extracting microbial DNA from up to 0.25 g soil with the QIAGEN DNeasy PowerLyzer PowerSoil Kit.
+
+<div class="facts">
+<div class="fact"><strong>Format</strong><span>Individual spin columns</span></div>
+<div class="fact"><strong>Input</strong><span>Up to 0.25 g soil</span></div>
+<div class="fact"><strong>Elution</strong><span>100 uL</span></div>
+<div class="fact"><strong>Total elapsed</strong><span>~30 min</span></div>
+</div>
+
+---
+
+## Before Starting
+
+::: {.alert .alert-warning role="alert"}
+**Prepare the kit**
+
+- Perform every centrifugation step at room temperature (15-25 deg C).
+- If Solution C1 contains precipitate, heat it at 60 deg C until the precipitate dissolves.
+- Shake Solution C4 thoroughly before use.
+- Ensure that PowerBead Tubes rotate freely in the centrifuge; do not exceed 10,000 x g.
+
+:::
+::: {.alert .alert-danger role="alert"}
+**Chemical safety**
+
+Solution C5 contains ethanol and is flammable. PowerBead Solution and Solution C4 contain guanidine salts. Do not add bleach or acidic solutions directly to waste containing these reagents.
+
+:::
+::: {.alert .alert-info role="alert"}
+**Choose the lysis setting**
+
+The vendor's starting setting is 4,000 rpm for 45 s for clay soils and 2,500 rpm for 45 s for loose, granular, or high-organic soils on a PowerLyzer 24. Record the setting used for each extraction batch.
+
+:::
+---
+
+## Materials
+
+**Kit reagents**
+
+- PowerBead Solution
+- Solution C1
+- Solution C2
+- Solution C3
+- Solution C4
+- Solution C5
+- Solution C6
+
+**Kit hardware**
+
+- PowerBead Tubes, Glass 0.1 mm
+- MB Spin Columns
+- 2 mL Collection Tubes
+
+**Equipment**
+
+- PowerLyzer 24 Homogenizer or another validated bead homogenizer
+- Microcentrifuge capable of 10,000 x g
+- Pipettes covering 60-750 uL volumes
+- Optional: Vortex-Genie 2 and 24-place Vortex Adapter (cat. no. 13000-V1-24)
+
+---
+
+## Part A: Lysis and Clarification
+
+*~10-15 min*
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>Add up to <strong>0.25 g soil</strong> to a PowerBead Tube.</span></li>
+  <li><input type="checkbox"><span>Add <strong>750 uL PowerBead Solution</strong> and <strong>60 uL Solution C1</strong>. Invert several times or vortex briefly.</span></li>
+  <li><input type="checkbox"><span>Homogenize using the validated setting for the soil. For a PowerLyzer 24, use <strong>4,000 rpm for 45 s</strong> for clay soils or <strong>2,500 rpm for 45 s</strong> for loose, granular, or high-organic soils. Alternatively, secure tubes horizontally in the 24-place Vortex Adapter and vortex at maximum speed for <strong>10 min</strong>; for more than 12 preps, extend vortexing by 5-10 min.</span></li>
+  <li><input type="checkbox"><span>Centrifuge at room temperature for <strong>30 s at 10,000 x g</strong>. For clay soils or an incompletely pelleted sample, centrifuge for <strong>3 min at 10,000 x g</strong>.</span></li>
+  <li><input type="checkbox"><span>Transfer the supernatant to a clean 2 mL Collection Tube. Expect approximately <strong>400-500 uL</strong>; some soil particles may remain.</span></li>
+</ul>
+
+---
+
+## Part B: Inhibitor Removal and DNA Binding
+
+*~15-20 min*
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>Add <strong>250 uL Solution C2</strong>, vortex for <strong>5 s</strong>, and incubate at <strong>2-8 deg C for 5 min</strong>.</span></li>
+  <li><input type="checkbox"><span>Centrifuge for <strong>1 min at 10,000 x g</strong>. Without disturbing the pellet, transfer up to <strong>600 uL supernatant</strong> to a clean 2 mL Collection Tube.</span></li>
+  <li><input type="checkbox"><span>Add <strong>200 uL Solution C3</strong>, vortex briefly, and incubate at <strong>2-8 deg C for 5 min</strong>.</span></li>
+  <li><input type="checkbox"><span>Centrifuge for <strong>1 min at 10,000 x g</strong>. Without disturbing the pellet, transfer up to <strong>750 uL supernatant</strong> to a clean 2 mL Collection Tube.</span></li>
+  <li><input type="checkbox"><span>Add <strong>1,200 uL Solution C4</strong> and vortex for <strong>5 s</strong>.</span></li>
+  <li><input type="checkbox"><span>Load <strong>675 uL</strong> onto an MB Spin Column. Centrifuge for <strong>1 min at 10,000 x g</strong> and discard the flow-through. Repeat with a second 675 uL load, then load and centrifuge the remaining mixture. Three loads are required.</span></li>
+</ul>
+
+::: {.alert .alert-info role="alert"}
+**Validated workflow note**
+
+The vendor states that the 5 min incubations after Solution C2 and Solution C3 may be omitted. Retain them when continuing an extraction workflow that was previously validated with these incubations.
+
+:::
+---
+
+## Part C: Wash and Elute DNA
+
+*~5 min*
+
+<ul class="checklist">
+  <li><input type="checkbox"><span>Add <strong>500 uL Solution C5</strong> to the MB Spin Column and centrifuge for <strong>30 s at 10,000 x g</strong>.</span></li>
+  <li><input type="checkbox"><span>Discard the flow-through and centrifuge again for <strong>1 min at 10,000 x g</strong> to remove residual wash solution.</span></li>
+  <li><input type="checkbox"><span>Place the MB Spin Column in a clean 2 mL Collection Tube without splashing Solution C5 onto the column.</span></li>
+  <li><input type="checkbox"><span>Add <strong>100 uL Solution C6</strong> to the center of the white filter membrane. Centrifuge for <strong>30 s at 10,000 x g</strong>.</span></li>
+  <li><input type="checkbox"><span>Discard the MB Spin Column. The eluate contains DNA ready for downstream applications.</span></li>
+</ul>
+
+::: {.alert .alert-success role="alert"}
+**Storage**
+
+Store eluted DNA frozen at -20 to -80 deg C. Solution C6 does not contain EDTA; avoid repeated freeze-thaw cycles.
+
+:::
+---
+
+## Bench Record
+
+<table id="bench-record-powerlyzer-powersoil" class="bench-record">
+  <tbody>
+    <tr><th>Date</th><td contenteditable="true"></td></tr>
+    <tr><th>Operator</th><td contenteditable="true"></td></tr>
+    <tr><th>Project or assay</th><td contenteditable="true"></td></tr>
+    <tr><th>Sample IDs</th><td contenteditable="true"></td></tr>
+    <tr><th>Soil input per sample (g)</th><td contenteditable="true"></td></tr>
+    <tr><th>Homogenizer and setting</th><td contenteditable="true"></td></tr>
+    <tr><th>C2/C3 incubation used</th><td contenteditable="true">5 min at 2-8 deg C</td></tr>
+    <tr><th>Extraction controls included</th><td contenteditable="true"></td></tr>
+    <tr><th>Elution volume (uL)</th><td contenteditable="true">100</td></tr>
+    <tr><th>Quantification method and result</th><td contenteditable="true"></td></tr>
+    <tr><th>DNA storage location</th><td contenteditable="true"></td></tr>
+    <tr><th>Notes</th><td contenteditable="true"></td></tr>
+  </tbody>
+</table>
+
+<button class="export-btn" onclick="exportBenchRecord('bench-record-powerlyzer-powersoil', 'dna-extraction-powerlyzer-powersoil-bench-record.png')">Export as PNG</button>
+
+---
+
+## Bench Notes
+
+<div class="bench-notes">
+<textarea id="labNotes" placeholder="Type bench notes here. They autosave in this browser on this computer."></textarea>
+<div class="toolbar">
+<button type="button" id="clearNotes">Clear notes</button>
+<span class="status" id="notesStatus">Notes are saved locally in this browser.</span>
+</div>
+</div>
+
+---
+
+## Stop Points
+
+::: {.alert .alert-danger role="alert"}
+**Stop and ask before:**
+
+- Using a bead-homogenization setting that has not been validated for the sample type.
+- Continuing if the sample is not pelleted after the specified centrifugation step and the needed clarification time is uncertain.
+- Disturbing or transferring an inhibitor-removal pellet.
+- Skipping the second post-wash centrifugation, because residual ethanol from Solution C5 can inhibit downstream DNA applications.
+- Processing an extraction batch without complete sample identification or the recorded lysis setting.
+
+:::
+---
+
+## References
+
+- QIAGEN. [DNeasy PowerLyzer PowerSoil Kit Quick Start Protocol](https://www.qiagen.com/en-US/resources/download/Protocols/hb-2214-001-1104492-pcard-dny-powerlyzer-powersoil-0816-ww), HB-2214-001 (2016).
+- QIAGEN. [DNeasy PowerLyzer PowerSoil Kit Handbook](https://www.b2b-qiagen.com/jp/resources/download.aspx?id=e9f9f78a-36ee-4c0f-b91d-ff7aaa6444ef&lang=en), HB-2253-001 (2017).
+
+<script>
+(function () {
+  const notes = document.getElementById("labNotes");
+  const clearButton = document.getElementById("clearNotes");
+  const status = document.getElementById("notesStatus");
+  const storageKey = "dna-extraction-powerlyzer-powersoil-notes";
+
+  if (!notes || !clearButton) return;
+
+  notes.value = localStorage.getItem(storageKey) || "";
+  notes.addEventListener("input", function () {
+    localStorage.setItem(storageKey, notes.value);
+    if (status) status.textContent = "Notes saved locally in this browser.";
+  });
+
+  clearButton.addEventListener("click", function () {
+    notes.value = "";
+    localStorage.removeItem(storageKey);
+    if (status) status.textContent = "Notes cleared from this browser.";
+  });
+})();
+</script>

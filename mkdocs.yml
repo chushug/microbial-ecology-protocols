@@ -32,6 +32,7 @@ nav:
   - Home: index.md
   - Bench Protocols:
     - Soil DNA Extraction (96-well): manuals/dna-extraction-96-powersoil.md
+    - Soil DNA Extraction (PowerLyzer): manuals/dna-extraction-powerlyzer-powersoil.md
     - Soil RNA Extraction: manuals/rna-extraction-powersoil.md
     - Soil RNA DNase & cDNA Synthesis: manuals/soil-rna-dnase-cdna.md
     - Agarose Gel Electrophoresis: manuals/gel-electrophoresis.md
