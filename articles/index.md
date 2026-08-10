@@ -4,6 +4,8 @@
 
 - [Soil DNA Extraction — DNeasy 96 PowerSoil
   Pro](https://chushug.github.io/microbial-ecology-protocols/articles/dna-extraction-96-powersoil.md):
+- [Soil DNA Extraction - DNeasy PowerLyzer
+  PowerSoil](https://chushug.github.io/microbial-ecology-protocols/articles/dna-extraction-powerlyzer-powersoil.md):
 - [Soil RNA Extraction — RNeasy PowerSoil Total
   RNA](https://chushug.github.io/microbial-ecology-protocols/articles/rna-extraction-powersoil.md):
 - [Soil RNA DNase Removal and cDNA

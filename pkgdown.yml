@@ -4,13 +4,14 @@ pkgdown_sha: ~
 articles:
   ammonium-nitrate-assay: ammonium-nitrate-assay.html
   dna-extraction-96-powersoil: dna-extraction-96-powersoil.html
+  dna-extraction-powerlyzer-powersoil: dna-extraction-powerlyzer-powersoil.html
   gel-electrophoresis: gel-electrophoresis.html
   gene-cloning-qpcr-standards: gene-cloning-qpcr-standards.html
   regular-pcr: regular-pcr.html
   rna-extraction-powersoil: rna-extraction-powersoil.html
   soil-rna-dnase-cdna: soil-rna-dnase-cdna.html
   soil-whc-gravity-drainage: soil-whc-gravity-drainage.html
-last_built: 2026-05-26T20:54Z
+last_built: 2026-08-10T17:09Z
 urls:
   reference: https://chushug.github.io/microbial-ecology-protocols/reference
   article: https://chushug.github.io/microbial-ecology-protocols/articles
