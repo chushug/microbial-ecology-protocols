@@ -24,6 +24,7 @@ Step-by-step references for running an assay or procedure at the bench.
 | [Soil RNA DNase Removal & cDNA Synthesis](manuals/soil-rna-dnase-cdna.md) | TURBO DNA-free + SuperScript IV | ~2.5-4 h |
 | [Agarose Gel Electrophoresis](manuals/gel-electrophoresis.md) | GelGreen / GelRed | ~25-60 min |
 | [Regular PCR](manuals/regular-pcr.md) | PCR master mix | ~1.5-2.5 h |
+| [qPCR Reaction Setup](manuals/qpcr-reaction-setup.md) | qPCR master mix + primer mix | ~20-40 min setup |
 | [Ammonium and Nitrate Colorimetry Assay](manuals/ammonium-nitrate-assay.md) | 1M KCl extraction + SpectraMax ABS Plus | ~1-2 d |
 | [Soil Maximum Water Holding Capacity](manuals/soil-whc-gravity-drainage.md) | Gravity drainage + 105 deg C dry mass | ~1-2 d |
 

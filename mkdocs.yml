@@ -37,6 +37,7 @@ nav:
     - Soil RNA DNase & cDNA Synthesis: manuals/soil-rna-dnase-cdna.md
     - Agarose Gel Electrophoresis: manuals/gel-electrophoresis.md
     - Regular PCR: manuals/regular-pcr.md
+    - qPCR Reaction Setup: manuals/qpcr-reaction-setup.md
     - Ammonium and Nitrate Assay: manuals/ammonium-nitrate-assay.md
     - Soil WHC Gravity Drainage: manuals/soil-whc-gravity-drainage.md
   - Workflow & Interpretation:

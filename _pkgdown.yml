@@ -50,6 +50,8 @@ navbar:
         href: articles/gel-electrophoresis.html
       - text: Regular PCR
         href: articles/regular-pcr.html
+      - text: qPCR Reaction Setup
+        href: articles/qpcr-reaction-setup.html
       - text: Ammonium and Nitrate Assay
         href: articles/ammonium-nitrate-assay.html
       - text: Soil WHC Gravity Drainage
@@ -74,6 +76,7 @@ articles:
   - soil-rna-dnase-cdna
   - gel-electrophoresis
   - regular-pcr
+  - qpcr-reaction-setup
   - ammonium-nitrate-assay
   - soil-whc-gravity-drainage
 - title: Workflow & Interpretation Guides

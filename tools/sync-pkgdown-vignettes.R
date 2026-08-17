@@ -20,6 +20,7 @@ manual_order <- c(
   "soil-rna-dnase-cdna",
   "gel-electrophoresis",
   "regular-pcr",
+  "qpcr-reaction-setup",
   "ammonium-nitrate-assay",
   "gene-cloning-qpcr-standards",
   "soil-whc-gravity-drainage"
