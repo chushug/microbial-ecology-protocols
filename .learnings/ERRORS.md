@@ -26,6 +26,34 @@ Use absolute paths for parent-workspace source materials and run website-file ch
 
 ---
 
+## [ERR-20260820-003] pkgdown-pages-destination-marker
+
+**Logged**: 2026-08-20T00:00:00-05:00
+**Priority**: medium
+**Status**: resolved
+**Area**: docs
+
+### Summary
+The Pages deployment helper stopped after the linked destination was cleaned because it would not overwrite the non-empty Git worktree without the expected pkgdown marker.
+
+### Error
+`pkgdown::build_site_github_pages()` called `check_dest_is_pkgdown()` for the detached `gh-pages` worktree and refused to proceed.
+
+The first deployment commit was also rejected because the remote `gh-pages` branch advanced while this local detached worktree was being prepared.
+
+### Suggested Fix
+Inspect the source `site/` link and publish destination, then copy the already-validated site into a fresh worktree based on the current remote `gh-pages` tip. Push only as a fast-forward update.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `site/`, `_pkgdown.yml`
+
+### Resolution
+- **Resolved**: 2026-08-20T00:00:00-05:00
+- **Notes**: Built the site locally, created a fresh detached worktree from the current remote `gh-pages` tip, replaced only its generated contents, and pushed the deployment as a fast-forward update.
+
+---
+
 ## [ERR-20260820-002] pkgdown-site-marker
 
 **Logged**: 2026-08-20T00:00:00-05:00
