@@ -455,16 +455,15 @@ validation before guild-level interpretation.</p>
 <p>Prepare the concentrated solution by dissolving <strong>0.5 g DMPP in
 10 mL</strong> DI water (0.05 g/mL). Then perform three serial 1:10
 dilutions: transfer 1 mL into 9 mL DI water for each step. The third
-dilution is 0.00005 g/mL, and adding 120 uL supplies 6 ug DMPP per
-bottle.</p>
+dilution is the required working solution at <strong>0.00005
+g/mL</strong>. Add <strong>120 uL per DMPP bottle</strong>, supplying
+<strong>6 ug DMPP per bottle</strong>.</p>
 <div class="alert alert-danger" role="alert">
-<p><strong>DMPP concentration check required</strong></p>
-<p>The stated target of 0.0005 g/mL is reached after
-<strong>two</strong>, not three, 1:10 dilutions from 0.05 g/mL. At 120
-uL, the two-dilution solution would deliver 60 ug per bottle; the
-three-dilution solution delivers 6 ug per bottle. Select and record the
-intended working solution before adding DMPP. The calculator shows both
-results and does not choose one for you.</p>
+<p><strong>Use the third dilution</strong></p>
+<p>Label each dilution step and record the final working-stock ID. Use
+only the third serial 1:10 dilution for this protocol. Do not substitute
+a concentrated or earlier dilution without revising the documented study
+design.</p>
 </div>
 <hr>
 </div>
@@ -555,14 +554,14 @@ v/v)</label>
 <td align="right">0.05 g/mL</td>
 </tr>
 <tr class="even">
-<td>After two 1:10 dilutions</td>
-<td align="right">0.0005 g/mL; <span id="dmppTwoDose">60 ug</span> per
-bottle at the entered volume</td>
+<td>Required working solution</td>
+<td align="right">Third serial 1:10 dilution: 0.00005 g/mL</td>
 </tr>
 <tr class="odd">
-<td>After three 1:10 dilutions</td>
-<td align="right">0.00005 g/mL; <span id="dmppThreeDose">6 ug</span> per
-bottle at the entered volume</td>
+<td>DMPP dose per bottle</td>
+<td align="right">
+<span id="dmppThreeDose">6 ug</span> at the entered
+120 uL volume</td>
 </tr>
 </tbody>
 </table>
@@ -590,10 +589,9 @@ material under the approved storage conditions. This is the Day-0
 baseline from the culture bottle.</span>
 </li>
 <li>
-<input type="checkbox"><span>For the DMPP bottle, add the selected,
-recorded DMPP working solution. Mix as consistently as possible without
-losing soil. Do not proceed if the two- versus three-dilution choice is
-not recorded.</span>
+<input type="checkbox"><span>For the DMPP bottle, add 120 uL of the
+recorded third serial 1:10 dilution. Mix as consistently as possible
+without losing soil.</span>
 </li>
 <li>
 <input type="checkbox"><span>Seal every bottle with its stopper and
@@ -852,7 +850,7 @@ Export as PNG
 <div class="alert alert-danger" role="alert">
 <p><strong>Stop and resolve before continuing</strong></p>
 <ul>
-<li>The DMPP working concentration or two- versus three-dilution choice
+<li>The DMPP working-stock ID, third serial dilution, or 120 uL addition
 is not recorded.</li>
 <li>The Ace or Oct bottle is opened but its planned inhibitor
 restoration cannot be documented.</li>
@@ -937,7 +935,6 @@ Biochemistry</em> 208, 109848. <a href="https://doi.org/10.1016/j.soilbio.2025.1
     set("dmppVolumePer", fmt(dmppVolume, "uL"));
     set("dmppTotal", fmt(dmppVolume * n, "uL"));
     set("dmppExtra", fmt(dmppVolume * n * 1.1, "uL"));
-    set("dmppTwoDose", fmt(dmppVolume * 0.5, "ug"));
     set("dmppThreeDose", fmt(dmppVolume * 0.05, "ug"));
   }
   ids.forEach(function (id) { document.getElementById(id).addEventListener("input", update); });

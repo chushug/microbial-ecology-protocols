@@ -202,17 +202,16 @@ requires local validation before guild-level interpretation.
 
 Prepare the concentrated solution by dissolving **0.5 g DMPP in 10 mL**
 DI water (0.05 g/mL). Then perform three serial 1:10 dilutions: transfer
-1 mL into 9 mL DI water for each step. The third dilution is 0.00005
-g/mL, and adding 120 uL supplies 6 ug DMPP per bottle.
+1 mL into 9 mL DI water for each step. The third dilution is the
+required working solution at **0.00005 g/mL**. Add **120 uL per DMPP
+bottle**, supplying **6 ug DMPP per bottle**.
 
-**DMPP concentration check required**
+**Use the third dilution**
 
-The stated target of 0.0005 g/mL is reached after **two**, not three,
-1:10 dilutions from 0.05 g/mL. At 120 uL, the two-dilution solution
-would deliver 60 ug per bottle; the three-dilution solution delivers 6
-ug per bottle. Select and record the intended working solution before
-adding DMPP. The calculator shows both results and does not choose one
-for you.
+Label each dilution step and record the final working-stock ID. Use only
+the third serial 1:10 dilution for this protocol. Do not substitute a
+concentrated or earlier dilution without revising the documented study
+design.
 
 ------------------------------------------------------------------------
 
@@ -233,11 +232,11 @@ DMPP volume per DMPP bottle (uL)
 | Air added to one Oct stock bottle | 100 mL | 100 mL | 110 mL |
 | DMPP working solution | 120 uL | 120 uL | 132 uL |
 
-| DMPP calculation check | Value |
-|----|---:|
-| Concentrated DMPP solution | 0.05 g/mL |
-| After two 1:10 dilutions | 0.0005 g/mL; 60 ug per bottle at the entered volume |
-| After three 1:10 dilutions | 0.00005 g/mL; 6 ug per bottle at the entered volume |
+| DMPP calculation check     |                                    Value |
+|----------------------------|-----------------------------------------:|
+| Concentrated DMPP solution |                                0.05 g/mL |
+| Required working solution  | Third serial 1:10 dilution: 0.00005 g/mL |
+| DMPP dose per bottle       |        6 ug at the entered 120 uL volume |
 
 ------------------------------------------------------------------------
 
@@ -254,9 +253,8 @@ From each bottle, remove a separate **4.0 g** molecular sample. Freeze
 DNA- and RNA-intended material under the approved storage conditions.
 This is the Day-0 baseline from the culture bottle.
 
-For the DMPP bottle, add the selected, recorded DMPP working solution.
-Mix as consistently as possible without losing soil. Do not proceed if
-the two- versus three-dilution choice is not recorded.
+For the DMPP bottle, add 120 uL of the recorded third serial 1:10
+dilution. Mix as consistently as possible without losing soil.
 
 Seal every bottle with its stopper and crimp. Check for a stable seal
 before gas injection.
@@ -341,8 +339,8 @@ Export as PNG
 
 **Stop and resolve before continuing**
 
-- The DMPP working concentration or two- versus three-dilution choice is
-  not recorded.
+- The DMPP working-stock ID, third serial dilution, or 120 uL addition
+  is not recorded.
 - The Ace or Oct bottle is opened but its planned inhibitor restoration
   cannot be documented.
 - Actual bottle headspace differs materially from the calculator input

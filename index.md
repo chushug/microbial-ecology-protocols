@@ -35,7 +35,8 @@
 - Added a generic four-treatment nitrification incubation study with a
   14-day preincubation, Day 0/2/4/7/10 soil schedule, the requested four
   gas-collection events, and an interactive planning and inhibitor
-  calculator.
+  calculator. The fixed DMPP workflow uses three serial 1:10 dilutions
+  to 0.00005 g/mL and adds 120 uL (6 ug) per DMPP bottle.
 - Added PCR principles/troubleshooting, NanoDrop/Qubit quality-control,
   and nitrification-interpretation guides; linked each guide to its
   applicable bench workflow.
