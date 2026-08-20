@@ -26,6 +26,32 @@ Use absolute paths for parent-workspace source materials and run website-file ch
 
 ---
 
+## [ERR-20260820-004] github-pages-web-open-safety
+
+**Logged**: 2026-08-20T00:00:00-05:00
+**Priority**: low
+**Status**: resolved
+**Area**: docs
+
+### Summary
+The browser helper rejected direct GitHub Pages URLs as unsafe after the Pages workflow succeeded.
+
+### Error
+The helper returned `URL ... is not safe to open` for the home page and new article URLs.
+
+### Suggested Fix
+Use a direct HTTPS request for post-deployment response and content checks when the browser helper has not established a safe URL context.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `https://chushug.github.io/microbial-ecology-protocols/`
+
+### Resolution
+- **Resolved**: 2026-08-20T00:00:00-05:00
+- **Notes**: GitHub Pages deployment succeeded; direct HTTPS checks are used for final page verification.
+
+---
+
 ## [ERR-20260820-003] pkgdown-pages-destination-marker
 
 **Logged**: 2026-08-20T00:00:00-05:00
