@@ -25,6 +25,10 @@ Bench manual for soil total RNA extraction using the QIAGEN RNeasy PowerSoil Tot
 
 ## Materials
 
+**Named kit**
+
+- RNeasy PowerSoil Total RNA Kit (QIAGEN)
+
 **Kit Solutions**
 
 - PowerBead Solution

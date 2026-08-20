@@ -36,9 +36,13 @@ nav:
     - Soil RNA Extraction: manuals/rna-extraction-powersoil.md
     - Soil RNA DNase & cDNA Synthesis: manuals/soil-rna-dnase-cdna.md
     - Agarose Gel Electrophoresis: manuals/gel-electrophoresis.md
-    - Regular PCR: manuals/regular-pcr.md
-    - qPCR Reaction Setup: manuals/qpcr-reaction-setup.md
+    - PCR - Regular: manuals/regular-pcr.md
+    - PCR - qPCR Reaction Setup: manuals/qpcr-reaction-setup.md
     - Ammonium and Nitrate Assay: manuals/ammonium-nitrate-assay.md
     - Soil WHC Gravity Drainage: manuals/soil-whc-gravity-drainage.md
+    - Nitrification Incubation Study: manuals/nitrification-incubation-study.md
   - Workflow & Interpretation:
     - Gene Cloning & qPCR Standards: manuals/gene-cloning-qpcr-standards.md
+    - PCR - Principles and Troubleshooting: manuals/pcr-principles-troubleshooting.md
+    - Nucleic Acid QC - NanoDrop and Qubit: manuals/nucleic-acid-qc-nanodrop-qubit.md
+    - Nitrification Incubation - Principles and Interpretation: manuals/nitrification-incubation-interpretation.md

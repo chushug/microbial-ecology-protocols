@@ -45,6 +45,10 @@ The vendor's starting setting is 4,000 rpm for 45 s for clay soils and 2,500 rpm
 
 ## Materials
 
+**Named kit**
+
+- DNeasy PowerLyzer PowerSoil Kit (QIAGEN)
+
 **Kit reagents**
 
 - PowerBead Solution

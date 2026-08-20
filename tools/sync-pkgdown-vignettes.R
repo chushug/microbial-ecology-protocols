@@ -23,7 +23,11 @@ manual_order <- c(
   "qpcr-reaction-setup",
   "ammonium-nitrate-assay",
   "gene-cloning-qpcr-standards",
-  "soil-whc-gravity-drainage"
+  "soil-whc-gravity-drainage",
+  "nitrification-incubation-study",
+  "pcr-principles-troubleshooting",
+  "nucleic-acid-qc-nanodrop-qubit",
+  "nitrification-incubation-interpretation"
 )
 
 alert_classes <- c(

@@ -1,4 +1,4 @@
-# Regular PCR
+# PCR - Regular
 
 Bench manual and fillable template for routine endpoint PCR setup, thermocycler programming, gel verification, and image recordkeeping.
 

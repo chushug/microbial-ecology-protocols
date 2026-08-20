@@ -1,0 +1,89 @@
+---
+title: "Nitrification Incubation - Principles and Interpretation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Nitrification Incubation - Principles and Interpretation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This guide explains how to interpret the four-treatment [Nitrification Incubation Study](nitrification-incubation-study.md). The design uses acetylene, 1-octyne, and DMPP as operational perturbations. It can compare treatment responses within the same source soil, but it does not prove absolute, organism-specific activity without supporting validation.
+
+---
+
+## Biological principle
+
+Nitrification is the microbial oxidation of ammonia to nitrite and then nitrate. In soil, ammonia oxidation can be associated with ammonia-oxidizing archaea (AOA), ammonia-oxidizing bacteria (AOB), and complete ammonia oxidizers (comammox). Nitrite oxidation and other nitrogen transformations can occur at the same time. Mineral-N change and N2O accumulation therefore integrate several processes, especially over long incubations.
+
+The linked protocol uses four parallel bottles from one preincubated soil: Ctrl has no inhibitor, Ace receives acetylene, Oct receives 1-octyne, and DMPP receives DMPP. The intended comparisons are based on inhibitor sensitivity reported in soil studies, but sensitivity changes with dose, soil chemistry, substrate availability, diffusion, and incubation duration [Hink et al., 2018; Rütting et al., 2021; Tan et al., 2025].
+
+## What the treatment contrasts mean
+
+Let C, A, O, and D be paired bottle responses for Ctrl, Ace, Oct, and DMPP, respectively. A response can be nitrate accumulation rate, ammonium-consumption rate when interpretable, or N2O accumulation rate. The following differences are *operational estimates*, conditional on the local inhibitor response:
+
+$$
+r_{AO,total}=C-A
+$$
+
+$$
+r_{AOB}=C-O
+$$
+
+$$
+r_{AOA}=D-A
+$$
+
+$$
+r_{comammox}=O-D
+$$
+
+These equations only make sense when paired control and inhibitor bottles are comparable, the inhibitor dose is documented, and the corresponding treatment difference is biologically and analytically credible. Do not automatically replace negative values with zero; flag them and inspect the raw paired observations, measurement uncertainty, and bottle handling.
+
+## Why early time windows are usually more informative
+
+The Day 0-4 interval is often the best primary window for rate estimation because substrates, oxygen conditions, and communities have had less time to shift. Day 0-7 provides a useful secondary assessment. The Day 10 endpoint is valuable for molecular comparison, but prolonged incubation can change inhibitor effectiveness, microbial abundance, substrate availability, and product accumulation. Use Day 10 as a cumulative response unless a linear, well-supported rate remains evident.
+
+## Mineral-N interpretation
+
+Increasing nitrate or nitrite-plus-nitrate in Ctrl relative to a paired inhibitor treatment is consistent with inhibitor-sensitive nitrification. Ammonium decline is informative only when mineralization and other ammonium-consuming processes are considered. A flat nitrate curve can mean low nitrification, limited oxygen, no available substrate, incomplete extraction, or a time window that is too short; it does not identify a guild by itself.
+
+The 0.3 g mineral-N sample is extracted with 1 M KCl in the linked [ammonium and nitrate assay](ammonium-nitrate-assay.md). Normalize concentrations using the study's declared moisture or dry-mass convention. Never compare fresh-mass and dry-mass-normalized values without an explicit conversion.
+
+## Gas interpretation
+
+Gas samples must be interpreted against the exact collection time, extracted volume, bottle headspace, temperature, and any replacement gas. The protocol collects gas after Day 0, before Day 2, after Day 7, and before Day 10, so the four gas intervals are not equal by default. Estimate accumulation only over intervals with documented timing and closed-bottle history. Do not treat a concentration alone as an emission rate without the headspace and mass conversion.
+
+Acetylene and 1-octyne bottles can require gas restoration after bottle opening. Any missing reinjection record, leak, or inconsistent aeration interval is a treatment-handling deviation that can bias the contrast more strongly than analytical variability.
+
+## Molecular interpretation
+
+Day-0 and Day-10 molecular material can show changes in DNA abundance or RNA transcript abundance, but neither measurement alone is a direct process-rate measurement. DNA may reflect biomass or gene copy number; RNA can be more responsive to handling and storage. Pair molecular results with mineral-N and gas data, preserve extraction/QC records, and compare the same treatment and sampling basis.
+
+## Troubleshooting patterns
+
+### All treatments behave similarly
+
+First rule out a setup or analytical issue: confirm actual inhibitor additions, stock preparation, headspace volume, seal integrity, and the mineral-N assay controls. If those checks pass, the soil may have low activity or the selected inhibitor conditions may not separate the processes in that soil. A pilot validation is more defensible than inferring no guild differences from unvalidated inhibitors.
+
+### Acetylene does not reduce the expected response
+
+Check stock composition, syringe delivery, leaks, timing, and whether the bottle was opened without restoration. If delivery is correct, the measured endpoint may include processes that acetylene does not remove or the chosen response may not be a sensitive nitrification indicator.
+
+### 1-Octyne or DMPP produces an unexpected increase
+
+An increase can reflect indirect competition, altered substrate availability, incomplete specificity, or ordinary bottle-to-bottle variation. It should not be re-labeled as a negative activity estimate without examining controls and replicated paired data. Tan et al. (2025) specifically emphasizes limitations in interpreting inhibitor-based separation.
+
+### Late time points reverse the early pattern
+
+Check for substrate depletion, oxygen limitation, product accumulation, repeated-opening effects, and community shifts. Report early and late windows separately rather than selecting only the interval that gives the expected contrast.
+
+## Minimum evidence for a treatment-based conclusion
+
+State the inhibitor stock/dose, bottle headspace, sampling schedule, actual soil mass, molecular sample handling, extraction basis, and the time window used for each estimate. Show paired bottle data alongside the difference, include negative/ambiguous values, and call the result an inhibitor-based operational estimate. This wording preserves the experimental insight without claiming organism-specific certainty beyond the validation evidence.
+
+## References
+
+- Hink, L., Gubry-Rangin, C., Nicol, G.W., and Prosser, J.I. (2018). The consequences of niche and physiological differentiation of archaeal and bacterial ammonia oxidisers for nitrous oxide emissions. *The ISME Journal* 12, 1084-1093. https://doi.org/10.1038/s41396-017-0025-5
+- Rütting, T., Schleusner, P., Hink, L., and Prosser, J.I. (2021). The contribution of ammonia-oxidizing archaea and bacteria to gross nitrification under different substrate availability. *Soil Biology and Biochemistry* 160, 108353. https://doi.org/10.1016/j.soilbio.2021.108353
+- Taylor, A.E., Vajrala, N., Giguere, A.T., et al. (2013). Use of aliphatic n-alkynes to discriminate soil nitrification activities of ammonia-oxidizing thaumarchaea and bacteria. *Applied and Environmental Microbiology* 79, 6544-6551. https://doi.org/10.1128/AEM.01928-13
+- Tan, C., Zeng, Y., Gubry-Rangin, C., Yin, C., and Liang, Y. (2025). Feasibility and limitations of using specific nitrification inhibitors to differentiate ammonia oxidizer activity. *Soil Biology and Biochemistry* 208, 109848. https://doi.org/10.1016/j.soilbio.2025.109848

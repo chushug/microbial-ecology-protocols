@@ -18,28 +18,6 @@ Bench-ready workflow for cloning a gene-of-interest PCR product into a plasmid, 
 
 ---
 
-## Before Starting
-
-::: {.alert .alert-success role="alert"}
-**Source status**
-
-This page is the web-ready conversion of `Experiments Protocol-Gene cloning & qPCR Standards2025.docx`, with quick-reference notes from `gene cloning protocol.pdf`. When the DOCX and PDF differ, treat the DOCX workflow as the main source and treat the PDF values as lab-notebook variants to confirm before use.
-
-:::
-::: {.alert .alert-warning role="alert"}
-**Contamination control**
-
-Keep pre-PCR setup, post-PCR products, competent cells, and plasmid stocks physically separated when possible. Use sterile tips and fresh gloves when switching between PCR, cloning, transformation, and colony handling.
-
-:::
-::: {.alert .alert-danger role="alert"}
-**Stop before changing selective conditions**
-
-Confirm the vector, antibiotic, competent-cell type, primer pair, and expected insert size before beginning. Antibiotic concentration, vector choice, and colony selection criteria are not interchangeable.
-
-:::
----
-
 ## Workflow Plan
 
 | Day | Work |

@@ -48,19 +48,27 @@ navbar:
         href: articles/soil-rna-dnase-cdna.html
       - text: Agarose Gel Electrophoresis
         href: articles/gel-electrophoresis.html
-      - text: Regular PCR
+      - text: PCR - Regular
         href: articles/regular-pcr.html
-      - text: qPCR Reaction Setup
+      - text: PCR - qPCR Reaction Setup
         href: articles/qpcr-reaction-setup.html
       - text: Ammonium and Nitrate Assay
         href: articles/ammonium-nitrate-assay.html
       - text: Soil WHC Gravity Drainage
         href: articles/soil-whc-gravity-drainage.html
+      - text: Nitrification Incubation Study
+        href: articles/nitrification-incubation-study.html
     guides:
       text: Workflow & Interpretation
       menu:
       - text: Gene Cloning & qPCR Standards
         href: articles/gene-cloning-qpcr-standards.html
+      - text: PCR - Principles and Troubleshooting
+        href: articles/pcr-principles-troubleshooting.html
+      - text: Nucleic Acid QC - NanoDrop and Qubit
+        href: articles/nucleic-acid-qc-nanodrop-qubit.html
+      - text: Nitrification Incubation - Principles and Interpretation
+        href: articles/nitrification-incubation-interpretation.html
     github:
       icon: fa-github
       href: https://github.com/chushug/microbial-ecology-protocols
@@ -79,7 +87,11 @@ articles:
   - qpcr-reaction-setup
   - ammonium-nitrate-assay
   - soil-whc-gravity-drainage
+  - nitrification-incubation-study
 - title: Workflow & Interpretation Guides
   navbar: Workflow & Interpretation
   contents:
   - gene-cloning-qpcr-standards
+  - pcr-principles-troubleshooting
+  - nucleic-acid-qc-nanodrop-qubit
+  - nitrification-incubation-interpretation

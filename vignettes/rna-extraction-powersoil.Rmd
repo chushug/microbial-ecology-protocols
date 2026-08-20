@@ -38,6 +38,10 @@ This protocol requires **3.5 mL phenol/chloroform/isoamyl alcohol (pH 6.5–8.0)
 
 ## Materials
 
+**Named kit**
+
+- RNeasy PowerSoil Total RNA Kit (QIAGEN)
+
 **Kit Solutions**
 
 - PowerBead Solution

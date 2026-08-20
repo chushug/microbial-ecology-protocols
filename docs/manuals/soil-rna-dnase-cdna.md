@@ -52,6 +52,11 @@ After DNase treatment, quantify the RNA if possible. Use only an aliquot for cDN
 
 ## Materials
 
+**Named reagents**
+
+- TURBO DNA-free Kit (Thermo Fisher Scientific)
+- SuperScript IV Reverse Transcriptase (Thermo Fisher Scientific)
+
 **TURBO DNA-free Kit**
 
 - 10X TURBO DNase Buffer

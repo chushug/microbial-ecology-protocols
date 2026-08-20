@@ -34,6 +34,10 @@ Bench-ready protocol for extracting microbial DNA from up to 0.25 g soil with th
 
 ## Materials
 
+**Named kit**
+
+- DNeasy PowerLyzer PowerSoil Kit (QIAGEN)
+
 **Kit reagents**
 
 - PowerBead Solution

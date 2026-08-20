@@ -1,8 +1,8 @@
 ---
-title: "Regular PCR"
+title: "PCR - Regular"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Regular PCR}
+  %\VignetteIndexEntry{PCR - Regular}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

@@ -25,6 +25,10 @@ Bench manual for 96-well plate soil DNA extraction using the QIAGEN DNeasy 96 Po
 
 ## Materials
 
+**Named kit**
+
+- DNeasy 96 PowerSoil Pro Kit (QIAGEN)
+
 **Kit Solutions**
 
 - Solution CD1 (bead beating buffer)

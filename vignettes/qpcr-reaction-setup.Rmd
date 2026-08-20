@@ -1,32 +1,43 @@
 ---
-hide:
-  - toc
+title: "PCR - qPCR Reaction Setup"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PCR - qPCR Reaction Setup}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
-
-# PCR - qPCR Reaction Setup
 
 Bench-ready setup for a 20 uL qPCR reaction using DNA extracts, a forward + reverse primer mix, and an assay-specific qPCR master mix. Use the validated instrument program and plate layout for the primer assay.
 
 <div class="facts">
-  <div class="fact"><strong>Reaction volume</strong><span>20 uL</span></div>
-  <div class="fact"><strong>DNA input</strong><span>1-10 ng</span></div>
-  <div class="fact"><strong>Practical DNA target</strong><span>1-4 ng/uL</span></div>
-  <div class="fact"><strong>Maximum single dilution</strong><span>10x</span></div>
+<div class="fact"><strong>Reaction volume</strong><span>20 uL</span></div>
+<div class="fact"><strong>DNA input</strong><span>1-10 ng</span></div>
+<div class="fact"><strong>Practical DNA target</strong><span>1-4 ng/uL</span></div>
+<div class="fact"><strong>Maximum single dilution</strong><span>10x</span></div>
 </div>
 
 ---
 
 ## Before Starting
 
-!!! info "Prepare standards separately"
-    Prepare and aliquot qPCR standards according to the [Gene Cloning and qPCR Standard Preparation](gene-cloning-qpcr-standards.md) protocol. Confirm the standard series, plate positions, and assay-specific controls before preparing the run plate.
+::: {.alert .alert-info role="alert"}
+**Prepare standards separately**
 
-!!! warning "Use the assay-specific run program"
-    This protocol defines reaction setup only. Use the validated qPCR cycling and melt-curve program for the selected primer assay; do not substitute a generic PCR program.
+Prepare and aliquot qPCR standards according to the [Gene Cloning and qPCR Standard Preparation](gene-cloning-qpcr-standards.md) protocol. Confirm the standard series, plate positions, and assay-specific controls before preparing the run plate.
 
-!!! danger "Prevent contamination"
-    Set up reactions in the clean pre-PCR area. Keep DNA extracts, standards, and amplified products separated. Use filter tips, fresh gloves, and DI or nuclease-free water designated for qPCR.
+:::
+::: {.alert .alert-warning role="alert"}
+**Use the assay-specific run program**
 
+This protocol defines reaction setup only. Use the validated qPCR cycling and melt-curve program for the selected primer assay; do not substitute a generic PCR program.
+
+:::
+::: {.alert .alert-danger role="alert"}
+**Prevent contamination**
+
+Set up reactions in the clean pre-PCR area. Keep DNA extracts, standards, and amplified products separated. Use filter tips, fresh gloves, and DI or nuclease-free water designated for qPCR.
+
+:::
 ---
 
 ## Materials
@@ -52,9 +63,12 @@ Prepare a shared forward + reverse primer mix from **undiluted primer stocks**. 
 | DI water | 360 uL |
 | **Final primer mix** | **400 uL** |
 
-!!! warning "Do not change primer concentrations by assumption"
-    The stock concentration is assay-specific. This 20:20:360 recipe is the routine lab primer mix; verify the primer identities and the validated assay before replacing the stock or modifying the ratio.
+::: {.alert .alert-warning role="alert"}
+**Do not change primer concentrations by assumption**
 
+The stock concentration is assay-specific. This 20:20:360 recipe is the routine lab primer mix; verify the primer identities and the validated assay before replacing the stock or modifying the ratio.
+
+:::
 ---
 
 ## DNA Sample Preparation
@@ -88,11 +102,11 @@ The Morrow Plots DNA-extraction worksheet contains Qubit original concentrations
 Enter the number of wells, including samples, standards, NTCs, and technical replicates. The master-mix total includes 10% excess; add DNA template or water separately to each well.
 
 <div class="calculator-controls">
-  <div class="control">
-    <label for="qpcrReactionCount">Number of qPCR wells</label>
-    <input id="qpcrReactionCount" type="number" min="1" step="1" value="1">
-    <p class="hint">Include sample wells, standards, NTCs, and technical replicates.</p>
-  </div>
+<div class="control">
+<label for="qpcrReactionCount">Number of qPCR wells</label>
+<input id="qpcrReactionCount" type="number" min="1" step="1" value="1">
+<p class="hint">Include sample wells, standards, NTCs, and technical replicates.</p>
+</div>
 </div>
 
 | Component | Per reaction | Total | Total + 10% |
@@ -164,23 +178,26 @@ Enter the number of wells, including samples, standards, NTCs, and technical rep
 ## Bench Notes
 
 <div class="bench-notes">
-  <textarea id="labNotes" placeholder="Type bench notes here. They autosave in this browser on this computer."></textarea>
-  <div class="toolbar">
-    <button type="button" id="clearNotes">Clear notes</button>
-    <span class="status" id="notesStatus">Notes are saved locally in this browser.</span>
-  </div>
+<textarea id="labNotes" placeholder="Type bench notes here. They autosave in this browser on this computer."></textarea>
+<div class="toolbar">
+<button type="button" id="clearNotes">Clear notes</button>
+<span class="status" id="notesStatus">Notes are saved locally in this browser.</span>
+</div>
 </div>
 
 ---
 
 ## Stop Points
 
-!!! danger "Stop and ask before"
-    - Using an unverified primer mix, qPCR master mix, cycling program, or standard series.
-    - Adding more than 10 ng DNA template per reaction or exceeding a 10x dilution without an assay-specific plan.
-    - Accepting a qPCR run when NTCs amplify, standards are misplaced, or assay-specific QC criteria are not met.
-    - Reporting results before recording the template concentration, dilution factor, and control outcomes.
+::: {.alert .alert-danger role="alert"}
+**Stop and ask before**
 
+- Using an unverified primer mix, qPCR master mix, cycling program, or standard series.
+- Adding more than 10 ng DNA template per reaction or exceeding a 10x dilution without an assay-specific plan.
+- Accepting a qPCR run when NTCs amplify, standards are misplaced, or assay-specific QC criteria are not met.
+- Reporting results before recording the template concentration, dilution factor, and control outcomes.
+
+:::
 <script>
 (function () {
   const reactionCount = document.getElementById("qpcrReactionCount");
