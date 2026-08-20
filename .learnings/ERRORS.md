@@ -26,6 +26,32 @@ Use absolute paths for parent-workspace source materials and run website-file ch
 
 ---
 
+## [ERR-20260820-005] rendered-html-inline-markup-check
+
+**Logged**: 2026-08-20T00:00:00-05:00
+**Priority**: low
+**Status**: resolved
+**Area**: docs
+
+### Summary
+A rendered-page assertion incorrectly expected a formatted sentence to remain a contiguous HTML string.
+
+### Error
+The page contained the intended pairing boundary, but inline markup split the sentence and caused a literal `Contains()` check to fail.
+
+### Suggested Fix
+For rendered prose checks, strip HTML tags or match stable fragments rather than expecting a fully formatted sentence to be contiguous.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `site/articles/nitrification-incubation-interpretation.html`
+
+### Resolution
+- **Resolved**: 2026-08-20T00:00:00-05:00
+- **Notes**: Replaced the literal assertion with a normalized-text check before committing.
+
+---
+
 ## [ERR-20260820-004] github-pages-web-open-safety
 
 **Logged**: 2026-08-20T00:00:00-05:00

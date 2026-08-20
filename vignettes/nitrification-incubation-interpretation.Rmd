@@ -59,6 +59,38 @@ Acetylene and 1-octyne bottles can require gas restoration after bottle opening.
 
 Day-0 and Day-10 molecular material can show changes in DNA abundance or RNA transcript abundance, but neither measurement alone is a direct process-rate measurement. DNA may reflect biomass or gene copy number; RNA can be more responsive to handling and storage. Pair molecular results with mineral-N and gas data, preserve extraction/QC records, and compare the same treatment and sampling basis.
 
+## DNA-only Day 0 and Day 10 design
+
+When DNA is collected only at Day 0 and Day 10, it is best interpreted as a before-versus-after measure of population or functional-gene change. For qPCR, report gene copies per gram dry soil for each target, such as AOA, AOB, or comammox `amoA`. For amplicon sequencing or metagenomics, report the selected community-composition, diversity, or functional-profile metric. These measurements can show enrichment, depletion, or compositional change during incubation; they do not by themselves demonstrate a process rate or instantaneous activity.
+
+### Paired change calculation
+
+For every source soil and its future Day-10 bottle, calculate a paired change on a log scale:
+
+$$
+\Delta_{DNA}=\log_2\left(\frac{DNA_{Day10}}{DNA_{Day0}}\right)
+$$
+
+Use a prespecified, documented rule for non-detects before calculating a fold change; do not add an arbitrary value after inspecting the result. To isolate an inhibitor-associated molecular response from the general incubation effect, compare the paired change in each inhibitor bottle with the paired Ctrl change from the same source soil:
+
+$$
+\Delta_{treatment}=\Delta_{Ace/Oct/DMPP}-\Delta_{Ctrl}
+$$
+
+Day-0 DNA samples taken from the four bottles before treatment are paired baseline measurements for their future bottles. They are not four independent treatment replicates, because no treatment has been applied at Day 0. Biological replication comes from independent source soils.
+
+### Recommended figures
+
+A paired trajectory plot is the clearest primary figure for qPCR: connect Day 0 and Day 10 values from each source soil, with colour denoting Ctrl, Ace, Oct, or DMPP. A second effect plot can show the treatment-minus-Ctrl log2 change for each source soil, with the group mean and uncertainty interval. A heatmap with rows as source soils or treatments, columns as target genes, and fill as log2 change is useful when multiple N-cycle targets are measured.
+
+For amplicon sequencing or metagenomics, use a PCoA or NMDS trajectory plot with arrows from Day 0 to Day 10 for each bottle. The arrow shows the direction and magnitude of community change, not a rate. Relate paired DNA changes to the independently measured mineral-N or gas response in a scatterplot only as an association; the inhibitor-based process contrast remains the evidence for an operational process response.
+
+### What the data can and cannot tell
+
+If a treatment changes both a process measurement and the abundance of a relevant DNA target, the two results provide mutually consistent evidence. If process changes without DNA change, the response may be immediate physiological inhibition rather than population change. If DNA changes without a process response, the population may have shifted without a detectable net rate change over the chosen interval. Always use Ctrl Day-0-to-Day-10 change to describe the incubation effect before attributing an additional shift to an inhibitor.
+
+With only one source soil, the design is descriptive. With multiple independent source soils, model the paired change or treatment-minus-Ctrl change with source soil retained as the pairing unit. Do not treat four treatments derived from one source soil as four biological replicates.
+
 ## Troubleshooting patterns
 
 ### All treatments behave similarly
