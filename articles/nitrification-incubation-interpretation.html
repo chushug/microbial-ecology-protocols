@@ -132,6 +132,73 @@ DMPP, respectively. A response can be nitrate accumulation rate,
 ammonium-consumption rate when interpretable, or N2O accumulation rate.
 The following differences are <em>operational estimates</em>,
 conditional on the local inhibitor response:</p>
+<div class="section level3">
+<h3 id="intended-inhibition-profiles">Intended inhibition profiles<a class="anchor" aria-label="anchor" href="#intended-inhibition-profiles"></a>
+</h3>
+<table class="table">
+<colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<thead><tr class="header">
+<th>Treatment</th>
+<th>Reagent</th>
+<th>Intended inhibition in this workflow</th>
+<th>Role in the contrast</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Ctrl</td>
+<td>None</td>
+<td>No inhibitor; ammonia oxidation and other bottle processes can
+proceed.</td>
+<td>Reference response, <code>C</code>.</td>
+</tr>
+<tr class="even">
+<td>Ace</td>
+<td>Acetylene</td>
+<td>Broad inhibition of ammonia monooxygenase (AMO)-mediated ammonia
+oxidation. It is used here to suppress AOA- and AOB-associated ammonia
+oxidation, and operationally represents the broad
+ammonia-oxidizer-inhibited response.</td>
+<td>
+<code>C - A</code> is the total acetylene-sensitive
+ammonia-oxidation response.</td>
+</tr>
+<tr class="odd">
+<td>Oct</td>
+<td>1-Octyne</td>
+<td>At an effective, locally validated dose, 1-octyne preferentially
+inactivates bacterial AMO. It is therefore used as the AOB-sensitive
+treatment; tested soil AOA were octyne-resistant in the original assay
+development.</td>
+<td>
+<code>C - O</code> is the octyne-sensitive, operational AOB
+component.</td>
+</tr>
+<tr class="even">
+<td>DMPP</td>
+<td>3,4-Dimethylpyrazole phosphate</td>
+<td>A nitrification inhibitor intended to reduce ammonia oxidation. In
+this four-inhibitor partition, it is treated as more inhibitory to AOB
+and often comammox than to AOA, leaving an AOA-enriched residual
+response.</td>
+<td>
+<code>D - A</code> is the proposed AOA component, and
+<code>O - D</code> is the proposed comammox component.</td>
+</tr>
+</tbody>
+</table>
+<p>The DMPP row is a <strong>local inference assumption</strong>, not a
+universal taxonomic property: DMPP responses vary with dose, soil
+chemistry, and the ammonia-oxidizer community. Confirm that the expected
+profile is present in the source soil before using <code>D - A</code> or
+<code>O - D</code> as guild-specific estimates. Likewise, test the
+working 1-octyne concentration rather than assuming complete AOB
+inhibition or no response from every non-AOB ammonia oxidizer [Taylor et
+al., 2013; Rütting et al., 2021; Tan et al., 2025].</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mrow><mi>A</mi><mi>O</mi><mo>,</mo><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>C</mi><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">
 r_{AO,total}=C-A
 </annotation></semantics></math></p>
@@ -150,6 +217,7 @@ corresponding treatment difference is biologically and analytically
 credible. Do not automatically replace negative values with zero; flag
 them and inspect the raw paired observations, measurement uncertainty,
 and bottle handling.</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="why-early-time-windows-are-usually-more-informative">Why early time windows are usually more informative<a class="anchor" aria-label="anchor" href="#why-early-time-windows-are-usually-more-informative"></a>
