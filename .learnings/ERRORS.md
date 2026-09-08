@@ -1,5 +1,34 @@
 # Error log
 
+## [ERR-20260908-001] protocol-site-relative-path-read
+
+**Logged**: 2026-09-08T00:00:00-05:00
+**Priority**: low
+**Status**: resolved
+**Area**: docs
+
+### Summary
+A website-source search was run from the parent workspace while using a path relative to the protocol-site repository.
+
+### Error
+```
+rg: docs\manuals\nitrification-incubation-interpretation.md: IO error ... The system cannot find the path specified.
+```
+
+### Suggested Fix
+Pass the absolute site-file path, or set the command working directory to the protocol-site repository before inspecting its source.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `docs/manuals/nitrification-incubation-interpretation.md`
+- See Also: ERR-20260820-001
+
+### Resolution
+- **Resolved**: 2026-09-08T00:00:00-05:00
+- **Notes**: All subsequent inspection and build commands used the website repository explicitly.
+
+---
+
 ## [ERR-20260820-001] workspace-path-assumption
 
 **Logged**: 2026-08-20T00:00:00-05:00

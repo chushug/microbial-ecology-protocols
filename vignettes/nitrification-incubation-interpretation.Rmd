@@ -21,6 +21,17 @@ The linked protocol uses four parallel bottles from one preincubated soil: Ctrl 
 
 Let C, A, O, and D be paired bottle responses for Ctrl, Ace, Oct, and DMPP, respectively. A response can be nitrate accumulation rate, ammonium-consumption rate when interpretable, or N2O accumulation rate. The following differences are *operational estimates*, conditional on the local inhibitor response:
 
+### Intended inhibition profiles
+
+| Treatment | Reagent | Intended inhibition in this workflow | Role in the contrast |
+|---|---|---|---|
+| Ctrl | None | No inhibitor; ammonia oxidation and other bottle processes can proceed. | Reference response, `C`. |
+| Ace | Acetylene | Broad inhibition of ammonia monooxygenase (AMO)-mediated ammonia oxidation. It is used here to suppress AOA- and AOB-associated ammonia oxidation, and operationally represents the broad ammonia-oxidizer-inhibited response. | `C - A` is the total acetylene-sensitive ammonia-oxidation response. |
+| Oct | 1-Octyne | At an effective, locally validated dose, 1-octyne preferentially inactivates bacterial AMO. It is therefore used as the AOB-sensitive treatment; tested soil AOA were octyne-resistant in the original assay development. | `C - O` is the octyne-sensitive, operational AOB component. |
+| DMPP | 3,4-Dimethylpyrazole phosphate | A nitrification inhibitor intended to reduce ammonia oxidation. In this four-inhibitor partition, it is treated as more inhibitory to AOB and often comammox than to AOA, leaving an AOA-enriched residual response. | `D - A` is the proposed AOA component, and `O - D` is the proposed comammox component. |
+
+The DMPP row is a **local inference assumption**, not a universal taxonomic property: DMPP responses vary with dose, soil chemistry, and the ammonia-oxidizer community. Confirm that the expected profile is present in the source soil before using `D - A` or `O - D` as guild-specific estimates. Likewise, test the working 1-octyne concentration rather than assuming complete AOB inhibition or no response from every non-AOB ammonia oxidizer [Taylor et al., 2013; Rütting et al., 2021; Tan et al., 2025].
+
 $$
 r_{AO,total}=C-A
 $$
