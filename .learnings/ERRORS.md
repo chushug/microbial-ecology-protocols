@@ -1,5 +1,31 @@
 # Error log
 
+## [ERR-20260908-002] gh-pages-worktree-clear-policy
+
+**Logged**: 2026-09-08T00:00:00-05:00
+**Priority**: low
+**Status**: resolved
+**Area**: infra
+
+### Summary
+The execution environment rejected a recursive deletion command intended to clear a verified, temporary GitHub Pages worktree.
+
+### Error
+The command was blocked by the execution policy before it ran.
+
+### Suggested Fix
+For an isolated deployment worktree, copy the validated `site/` contents over the existing checked-out Pages files and commit only the substantive generated diff.
+
+### Metadata
+- Reproducible: yes
+- Related Files: `site/`, `gh-pages`
+
+### Resolution
+- **Resolved**: 2026-09-08T00:00:00-05:00
+- **Notes**: Overlaid the freshly built static site onto a new detached `gh-pages` worktree; Git confirmed that only the expected article, Markdown, site manifest, and search index changed.
+
+---
+
 ## [ERR-20260908-001] protocol-site-relative-path-read
 
 **Logged**: 2026-09-08T00:00:00-05:00
