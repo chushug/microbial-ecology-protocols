@@ -70,6 +70,52 @@ At Day 0, remove 0.3 g for mineral N and 4.0 g for DNA/RNA from each bottle befo
 !!! warning "Repeated sampling changes the system"
     This is a repeatedly opened microcosm. Record every opening, gas withdrawal, soil mass, aeration interval, and inhibitor restoration. Interpret late time points as responses of a repeatedly handled bottle, not as an untouched closed microcosm.
 
+!!! danger "Two dosing principles: liquid agents scale with soil mass, gas agents scale with headspace"
+    Do not apply one basis to all four treatments. They are not dosed the same way.
+
+    | Agent | Phase | Scales with | Dose on this page |
+    |---|---|---|---|
+    | Ammonium sulfate | liquid | **soil mass, 10 g basis** | 80 or 150 ug N per g dry soil |
+    | DMPP | liquid | **soil mass, 10 g basis** | 1.2 ug per g dry soil = 12 ug per bottle |
+    | Acetylene | gas | **measured headspace** | 0.1% v/v final headspace |
+    | 1-Octyne | gas | **measured headspace** | 0.03% v/v final headspace |
+
+    Dosing 1-octyne per gram of soil is a category error: doubling the soil basis would drive it to 0.066% v/v, twice the literature target and outside the 0.001-0.03% range that Tan et al. (2025) tested. Above that range 1-octyne begins to inhibit comammox *Nitrospira* clade A, which breaks the `Oct - DMPP` comammox estimate.
+
+!!! warning "The bottle holds less than 10 g once Day-0 sampling is done"
+    10 g is transferred at Day 0, then 0.3 g mineral-N and 4.0 g molecular soil are removed before treatment, leaving about **5.7 g**. This page doses against the **10 g transfer mass** as instructed, so the concentration actually experienced by the remaining soil is higher than nominal: 12 ug DMPP in 5.7 g is about **2.1 ug per g**, against the 1.2 ug per g used by Tan et al. (2025).
+
+    Record the choice explicitly. To dose against the soil that is actually incubated instead, set the calculation basis input to 5.7 and the DMPP volume falls to 137 uL. Also record whether the 10 g transfer was field-moist or dry-mass-equivalent, because that shifts the effective per-gram dose again.
+
+---
+
+## Optional Step: Nitrogen Amendment
+
+Ammonium amendment is a **parallel option, not a required step**. Run the whole batch at one nitrogen level. Compare treatment effects within a level; never compare absolute rates between levels.
+
+| Option | Added NH4+-N | Per bottle on the 10 g basis | Literature basis |
+|---|---:|---:|---|
+| **N-none** | 0 ug N per g | 0 | Hink et al. (2018); Tan et al. (2022) unfertilised arm |
+| **N-80** | 80 ug N per g dry soil | 800 ug N = 3.77 mg (NH4)2SO4 | Tan et al. (2025), Experiment 1 |
+| **N-150** | 150 ug N per g dry soil | 1500 ug N = 7.08 mg (NH4)2SO4 | Tan et al. (2022) |
+
+**What each option costs you**
+
+| Option | Expected nitrification signal | Usable incubation length | DMPP dose basis |
+|---|---|---|---|
+| N-none | Substrate comes only from native mineralisation. Rates near or below 1 ug N per g per day. Inhibitor differences may not reach significance. | About 24 d before enough product accumulates | Fixed absolute dose only; the 1.5%-of-added-N threshold cannot be applied |
+| N-80 | Strong. In the slower Tan et al. (2025) soil (4.1 ug N per g per day) the added N was not exhausted within 10 d | 10 d, with the cleanest window in the first 3-5 d | 1.5% of added N = 12 ug per bottle |
+| N-150 | Strong, with a larger substrate pool | 10 d | 1.5% of added N = 22.5 ug per bottle |
+
+!!! tip "The fixed DMPP dose and the N-80 option agree"
+    12 ug DMPP per bottle is exactly 1.5% of 800 ug N, and 800 ug N is 80 ug N per g on the 10 g basis. Selecting **N-80** therefore requires no change to the DMPP dose: both routes call for 12 ug, delivered as 240 uL of the third dilution. **N-150** requires 22.5 ug, delivered as 450 uL.
+
+!!! warning "1.5% of added N is a threshold, not a plateau"
+    The Tan et al. (2025) meta-analysis found that below 1.5% of added N, DMPP did **not** significantly inhibit comammox *Nitrospira* clade A; at or above 1.5% it did. Never dose below this line. Under **N-none** the dose cannot be expressed as a percentage of added N at all, so record that comammox inhibition is unverified and do not claim it.
+
+!!! info "Nitrogen changes which guild you are measuring"
+    In the same soil, Tan et al. (2022) found AOB contributed 3.0-9.8% of N2O without amendment and 60.4-65.3% with it. Both results are valid; they describe different scenarios. Report amended results as activity under nitrogen input, not as in-situ background rates.
+
 ---
 
 ## Incubation Planning Calculator
@@ -87,12 +133,14 @@ Enter the number of independent source-soil samples. One source sample receives 
     <p class="hint">Measure the actual headspace if soil volume, added liquid, or bottle geometry makes it different from 150 mL.</p>
   </div>
   <div class="control">
-    <label for="octDosePer10g">Provisional Oct stock delivery per 10 g soil (mL)</label>
-    <input id="octDosePer10g" type="number" min="0" step="0.1" value="3.9">
+    <label for="octStock">1-Octyne concentration in stock gas (% v/v)</label>
+    <input id="octStock" type="number" min="0.001" step="0.1" value="2.5">
+    <p class="hint">Nominal value for 40 uL neat octyne in a 150 mL bottle plus 100 mL air. Replace with a GC-verified value when available.</p>
   </div>
   <div class="control">
-    <label for="postDayZeroMass">Post-Day-0 inhibitor calculation basis (g soil/bottle)</label>
-    <input id="postDayZeroMass" type="number" min="0" step="0.1" value="5">
+    <label for="postDayZeroMass">Soil calculation basis for liquid agents (g per bottle)</label>
+    <input id="postDayZeroMass" type="number" min="0" step="0.1" value="10">
+    <p class="hint">10 g is the Day-0 transfer mass. Enter 5.7 instead to dose against the soil that actually remains after Day-0 sampling.</p>
   </div>
 </div>
 
@@ -144,14 +192,69 @@ Thus, a 150 mL headspace requires **1.5 mL** of 10% stock per Ace bottle. The ca
 
 ### 1-Octyne stock
 
-In a labeled 150 mL serum bottle, add clean glass bead(s) and **40 uL 1-octyne**. Inject **100 mL air** to create positive pressure, then shake for **30 s** to prepare the working stock. The operational starting delivery in this protocol is **3.9 mL stock per 10 g soil**. Because liquid 1-octyne volume does not itself establish a known gas-phase concentration, this is a provisional delivery method that requires local validation before guild-level interpretation.
+In a labeled 150 mL serum bottle, add clean glass bead(s) and **40 uL 1-octyne**. Inject **100 mL air** to create positive pressure, then shake for **30 s** to prepare the working stock.
+
+**Nominal stock concentration.** 1-Octyne has a density of 0.715 g/mL and a molar mass of 110.20 g/mol, so 40 uL is 28.6 mg, or 2.60e-4 mol, which occupies about 6.35 mL as vapour at 25 deg C and 1 atm. The bottle then holds 150 mL of gas at roughly 250/150 atm after the 100 mL air injection, so the octyne fraction of that compressed gas is about **2.5% v/v**, assuming the liquid volatilises completely.
+
+**Delivery is set by headspace, not by soil mass.** For a 0.03% v/v target:
+
+$$
+V_{inject}=V_{headspace}\times\frac{0.0003}{C_{stock}}
+$$
+
+With a 2.5% stock and a 150 mL headspace this gives about **1.8 mL per Oct bottle**. The calculator below recomputes it from the entered stock concentration and headspace.
+
+!!! danger "This stock concentration is nominal until validated"
+    Liquid volume alone does not establish a gas-phase concentration, and 40 uL in a pressurised 150 mL bottle may exceed saturation so that part of the octyne stays liquid. Confirm no droplet remains after shaking, and verify the stock by GC before using `Oct - DMPP` as a comammox estimate. Do **not** scale this volume with soil mass: Tan et al. (2025) tested 0.001-0.03% v/v, and above that range 1-octyne starts to inhibit comammox clade A.
 
 ### DMPP serial dilution
 
-Prepare the concentrated solution by dissolving **0.5 g DMPP in 10 mL** DI water (0.05 g/mL). Then perform three serial 1:10 dilutions: transfer 1 mL into 9 mL DI water for each step. The third dilution is the required working solution at **0.00005 g/mL**. Add **120 uL per DMPP bottle**, supplying **6 ug DMPP per bottle**.
+Prepare the concentrated solution by dissolving **0.5 g DMPP in 10 mL** DI water (0.05 g/mL). Then perform three serial 1:10 dilutions: transfer 1 mL into 9 mL DI water for each step. The third dilution is the required working solution at **0.00005 g/mL**, which is 50 ug/mL, or **0.05 ug per uL**.
+
+On the 10 g calculation basis the target is 1.2 ug DMPP per g dry soil, so:
+
+$$
+12\ \mathrm{ug\ bottle^{-1}} \div 0.05\ \mathrm{ug\ uL^{-1}} = 240\ \mathrm{uL\ per\ DMPP\ bottle}
+$$
+
+| Route | DMPP per bottle | Volume of third dilution |
+|---|---:|---:|
+| Fixed dose, 1.2 ug per g x 10 g | 12 ug | 240 uL |
+| N-80, 1.5% of 800 ug N | 12 ug | 240 uL |
+| N-150, 1.5% of 1500 ug N | 22.5 ug | 450 uL |
 
 !!! danger "Use the third dilution"
     Label each dilution step and record the final working-stock ID. Use only the third serial 1:10 dilution for this protocol. Do not substitute a concentrated or earlier dilution without revising the documented study design.
+
+### Ammonium sulfate stock (only if amending nitrogen)
+
+Skip this subsection entirely under **N-none**.
+
+!!! danger "Every nitrogen rate on this page is on an elemental-N basis"
+    `ug N per g` means micrograms of **nitrogen atoms**, not micrograms of ammonium ion and not micrograms of salt. The hyphenated forms used in the literature and in the mineral-N assay - `NH4+-N`, `NO3--N`, `(NH4)2SO4-N` - all mean "expressed as N". Weighing 80 ug of salt instead of supplying 80 ug of N would deliver 23 times too little nitrogen.
+
+    | Basis | Per bottle under N-80, 10 g basis |
+    |---|---:|
+    | N atoms - the stated rate | 800 ug |
+    | NH4+ ion equivalent | 1030 ug |
+    | **(NH4)2SO4 - what you weigh** | **3.77 mg** |
+
+Ammonium sulfate ((NH4)2SO4) has a molar mass of 132.13 g/mol and an N mass fraction of 0.2120, so **1 mg N requires 4.717 mg of salt**. Prepare 10 mL of stock so that a **120 uL** addition delivers the whole per-bottle dose, matching the DMPP delivery volume.
+
+If only ammonium chloride is available, NH4Cl has a molar mass of 53.49 g/mol and an N mass fraction of 0.2618, so 800 ug N requires 3.06 mg NH4Cl. Both Tan et al. studies used ammonium sulfate; chloride can impose osmotic or ionic effects at higher rates.
+
+| Option | (NH4)2SO4 in 10 mL DI | Delivers in 120 uL |
+|---|---:|---:|
+| N-80 | 314 mg | 800 ug N |
+| N-150 | 590 mg | 1500 ug N |
+
+Check before use: 314 mg / 10 mL = 31.4 mg/mL; 31.4 x 0.2120 = 6.66 mg N/mL; 6.66 x 0.120 = 0.800 mg N per bottle.
+
+!!! warning "Expected day-0 reading is set by the real soil mass, not the calculation basis"
+    The dose is calculated against the 10 g transfer mass but the bottle actually holds about 5.7 g after Day-0 sampling, so 800 ug N raises the measured concentration by roughly 800 / 5.7 = **140 ug N per g**, not 80. Compare the day-0 recovery check against that figure plus the native pool. A reading well below it means part of the ammonium is clay-fixed and not KCl-extractable; use the measured day-0 value as the baseline instead of the nominal dose.
+
+!!! warning "Add nitrogen to every bottle and balance the liquid volume"
+    Nitrogen goes into **all four** bottles, including Ctrl and Ace. Only the inhibitor may differ between bottles. Add 120 uL of nitrogen stock to every bottle, then add the DMPP dilution to the DMPP bottle and an equal volume of DI water to the other three, so that every bottle receives the same total liquid.
 
 ---
 
@@ -168,7 +271,16 @@ Prepare the concentrated solution by dissolving **0.5 g DMPP in 10 mL** DI water
   </div>
   <div class="control">
     <label for="dmppVolume">DMPP volume per DMPP bottle (uL)</label>
-    <input id="dmppVolume" type="number" min="0" step="1" value="120">
+    <input id="dmppVolume" type="number" min="0" step="1" value="240">
+  </div>
+  <div class="control">
+    <label for="nRate">Added NH4+-N (ug N per g soil; 0 = N-none)</label>
+    <input id="nRate" type="number" min="0" step="1" value="0">
+    <p class="hint">Enter 80 for N-80 or 150 for N-150. Leave at 0 to run without amendment.</p>
+  </div>
+  <div class="control">
+    <label for="nStockVolume">Nitrogen stock added per bottle (uL)</label>
+    <input id="nStockVolume" type="number" min="0" step="1" value="120">
   </div>
 </div>
 
@@ -176,7 +288,7 @@ Prepare the concentrated solution by dissolving **0.5 g DMPP in 10 mL** DI water
 |---|---:|---:|---:|
 | Ace stock injection | <span id="acePerBottle">1.5 mL</span> | <span id="aceTotal">1.5 mL</span> | <span id="aceExtra">1.7 mL</span> |
 | Acetylene needed to make one 150 mL stock bottle | 15 mL | 15 mL | 16.5 mL |
-| Oct stock delivery using post-Day-0 basis | <span id="octPerBottle">1.95 mL</span> | <span id="octTotal">1.95 mL</span> | <span id="octExtra">2.15 mL</span> |
+| Oct stock delivery for 0.03% v/v headspace | <span id="octPerBottle">1.80 mL</span> | <span id="octTotal">1.80 mL</span> | <span id="octExtra">1.98 mL</span> |
 | 1-Octyne for one stock bottle | 40 uL | 40 uL | 44 uL |
 | Air added to one Oct stock bottle | 100 mL | 100 mL | 110 mL |
 | DMPP working solution | <span id="dmppVolumePer">120 uL</span> | <span id="dmppTotal">120 uL</span> | <span id="dmppExtra">132 uL</span> |
@@ -185,7 +297,29 @@ Prepare the concentrated solution by dissolving **0.5 g DMPP in 10 mL** DI water
 |---|---:|
 | Concentrated DMPP solution | 0.05 g/mL |
 | Required working solution | Third serial 1:10 dilution: 0.00005 g/mL |
-| DMPP dose per bottle | <span id="dmppThreeDose">6 ug</span> at the entered 120 uL volume |
+| DMPP dose per bottle | <span id="dmppThreeDose">12 ug</span> at the entered volume |
+| DMPP dose per g soil | <span id="dmppDosePerG">1.2 ug/g</span> on the entered calculation basis |
+| DMPP dose per g of soil actually in the bottle | <span id="dmppDoseActual">2.11 ug/g</span> at 5.7 g remaining |
+| Dose required by the 1.5% rule | <span id="dmppRequiredDose">not applicable without amendment</span> |
+| Volume required by the 1.5% rule | <span id="dmppRequiredVolume">not applicable without amendment</span> |
+
+**Nitrogen amendment (skip under N-none)**
+
+| Item | Per bottle | Total for n bottles | Stock to prepare |
+|---|---:|---:|---:|
+| Added NH4+-N | <span id="nPerBottle">0 ug</span> | <span id="nTotal">0 ug</span> | - |
+| (NH4)2SO4 | <span id="nSaltPerBottle">0 mg</span> | <span id="nSaltTotal">0 mg</span> | <span id="nSaltPer10">0 mg per 10 mL</span> |
+| Nitrogen stock volume | <span id="nVolPerBottle">120 uL</span> | <span id="nVolTotal">480 uL</span> | <span id="nVolExtra">528 uL with 10% overage</span> |
+| DI water to balance non-DMPP bottles | <span id="balanceVolume">120 uL each</span> | <span id="balanceTotal">360 uL</span> | - |
+
+**Per-bottle dose summary**
+
+| Treatment | Liquid added | Gas injected | Inhibitor delivered |
+|---|---|---|---|
+| Ctrl | N stock (if amending) + DI balance volume | none | none |
+| Ace | N stock (if amending) + DI balance volume | <span id="aceSummary">1.5 mL of 10% acetylene-air stock</span> | 0.1% v/v final headspace |
+| Oct | N stock (if amending) + DI balance volume | <span id="octSummary">1.80 mL of 1-octyne stock</span> | 0.03% v/v final headspace (provisional) |
+| DMPP | N stock (if amending) + DMPP third dilution | none | <span id="dmppSummary">6 ug per bottle</span> |
 
 ---
 
@@ -195,7 +329,9 @@ Prepare the concentrated solution by dissolving **0.5 g DMPP in 10 mL** DI water
   <li><input type="checkbox"><span>Confirm bottle IDs, target treatment, soil mass, preincubation duration, and the selected moisture target before sampling.</span></li>
   <li><input type="checkbox"><span>From each bottle, remove <strong>0.3 g</strong> soil into its mineral-N tube. Add 1.5 mL 1 M KCl and follow the linked [ammonium and nitrate extraction workflow](ammonium-nitrate-assay.md).</span></li>
   <li><input type="checkbox"><span>From each bottle, remove a separate <strong>4.0 g</strong> molecular sample. Freeze DNA- and RNA-intended material under the approved storage conditions. This is the Day-0 baseline from the culture bottle.</span></li>
-  <li><input type="checkbox"><span>For the DMPP bottle, add 120 uL of the recorded third serial 1:10 dilution. Mix as consistently as possible without losing soil.</span></li>
+  <li><input type="checkbox"><span>If amending nitrogen, add the calculated volume of ammonium sulfate stock to <strong>all four</strong> bottles, including Ctrl and Ace. Record the option used (N-80 or N-150) and the stock ID. Skip under N-none.</span></li>
+  <li><input type="checkbox"><span>For the DMPP bottle, add the calculated volume of the recorded third serial 1:10 dilution (240 uL under N-none or N-80; 450 uL under N-150). Mix as consistently as possible without losing soil.</span></li>
+  <li><input type="checkbox"><span>Add an equal volume of DI water to the Ctrl, Ace, and Oct bottles so every bottle receives the same total liquid.</span></li>
   <li><input type="checkbox"><span>Seal every bottle with its stopper and crimp. Check for a stable seal before gas injection.</span></li>
   <li><input type="checkbox"><span>Inject the calculated acetylene-air stock into Ace bottles. Inject the documented 1-octyne stock volume into Oct bottles. Do not add inhibitors to Ctrl bottles.</span></li>
   <li><input type="checkbox"><span>Record formal incubation start date/time, actual headspace calculation, inhibitor stock ID, injection volume, temperature, moisture adjustment, and operator.</span></li>
@@ -248,7 +384,10 @@ At Days 2, 4, and 7, collect 0.3 g soil for mineral N. At Day 10, collect 0.3 g 
     <tr><th>Actual bottle headspace</th><td contenteditable="true"></td></tr>
     <tr><th>Ace stock / injection volume</th><td contenteditable="true"></td></tr>
     <tr><th>Oct stock / injection volume</th><td contenteditable="true"></td></tr>
+    <tr><th>Soil calculation basis (5 g post-Day-0 or other) and field-moist vs dry-mass</th><td contenteditable="true">5 g post-Day-0</td></tr>
+    <tr><th>Nitrogen option / stock ID / volume per bottle</th><td contenteditable="true">N-none</td></tr>
     <tr><th>DMPP dilution selected / volume / dose</th><td contenteditable="true"></td></tr>
+    <tr><th>DI balance volume added to non-DMPP bottles</th><td contenteditable="true"></td></tr>
     <tr><th>Gas vial IDs and collection times</th><td contenteditable="true"></td></tr>
     <tr><th>Mineral-N sample IDs</th><td contenteditable="true"></td></tr>
     <tr><th>Molecular sample IDs / storage</th><td contenteditable="true"></td></tr>
@@ -264,7 +403,11 @@ At Days 2, 4, and 7, collect 0.3 g soil for mineral N. At Day 10, collect 0.3 g 
 ## Stop Points
 
 !!! danger "Stop and resolve before continuing"
-    - The DMPP working-stock ID, third serial dilution, or 120 uL addition is not recorded.
+    - The nitrogen option (N-none, N-80, or N-150) is not recorded before any solution is added.
+    - Nitrogen was added to some bottles but not all four, or the liquid volume was not balanced across bottles.
+    - The DMPP working-stock ID, third serial dilution, or delivered volume is not recorded.
+    - The DMPP dose falls below 1.5% of added N.
+    - The soil calculation basis is not recorded, or the 10 g fill was not identified as field-moist or dry-mass-equivalent.
     - The Ace or Oct bottle is opened but its planned inhibitor restoration cannot be documented.
     - Actual bottle headspace differs materially from the calculator input and the Ace injection is not recalculated.
     - A gas vial cannot be uniquely matched to its bottle, treatment, event, and collection time.
@@ -281,7 +424,7 @@ Read [Nitrification Incubation: Principles and Interpretation](nitrification-inc
 
 <script>
 (function () {
-  const ids = ["incSampleCount", "aceHeadspace", "octDosePer10g", "postDayZeroMass", "aceTarget", "aceStock", "dmppVolume"];
+  const ids = ["incSampleCount", "aceHeadspace", "octStock", "postDayZeroMass", "aceTarget", "aceStock", "dmppVolume", "nRate", "nStockVolume"];
   function value(id, fallback) {
     const input = document.getElementById(id);
     return Math.max(0, parseFloat(input.value) || fallback);
@@ -301,7 +444,8 @@ Read [Nitrification Incubation: Principles and Interpretation](nitrification-inc
     const aceTarget = value("aceTarget", 0.1) / 100;
     const aceStock = value("aceStock", 10) / 100;
     const acePer = aceStock > 0 ? headspace * aceTarget / aceStock : 0;
-    const octPer = value("octDosePer10g", 3.9) * value("postDayZeroMass", 5) / 10;
+    const octStock = value("octStock", 2.5) / 100;
+    const octPer = octStock > 0 ? headspace * 0.0003 / octStock : 0;
     const dmppVolume = value("dmppVolume", 120);
     set("totalBottles", bottles);
     set("totalGasVials", gasVials);
@@ -324,6 +468,39 @@ Read [Nitrification Incubation: Principles and Interpretation](nitrification-inc
     set("dmppTotal", fmt(dmppVolume * n, "uL"));
     set("dmppExtra", fmt(dmppVolume * n * 1.1, "uL"));
     set("dmppThreeDose", fmt(dmppVolume * 0.05, "ug"));
+
+    // Nitrogen amendment. 0 means run without amendment.
+    const basis = value("postDayZeroMass", 10);
+    const nRate = value("nRate", 0);
+    const nVol = value("nStockVolume", 120);
+    const dmppDose = dmppVolume * 0.05;                 // uL x 0.05 ug/uL
+    const nPerBottle = nRate * basis;                   // ug N per bottle
+    const saltPerBottle = (nPerBottle / 1000) / 0.2120; // mg (NH4)2SO4
+    const saltPer10mL = nVol > 0 ? saltPerBottle * (10 / (nVol / 1000)) : 0;
+
+    set("dmppDosePerG", basis > 0 ? fmt(dmppDose / basis, "ug/g", 2) : "n/a");
+    set("dmppDoseActual", fmt(dmppDose / 5.7, "ug/g", 2) + " at 5.7 g remaining");
+    if (nRate > 0) {
+      const required = nPerBottle * 0.015;
+      set("dmppRequiredDose", fmt(required, "ug", 2));
+      set("dmppRequiredVolume", fmt(required / 0.05, "uL", 0));
+    } else {
+      set("dmppRequiredDose", "not applicable without amendment");
+      set("dmppRequiredVolume", "not applicable without amendment");
+    }
+    set("nPerBottle", fmt(nPerBottle, "ug", 0));
+    set("nTotal", fmt(nPerBottle * bottles, "ug", 0));
+    set("nSaltPerBottle", fmt(saltPerBottle, "mg", 2));
+    set("nSaltTotal", fmt(saltPerBottle * bottles, "mg", 2));
+    set("nSaltPer10", fmt(saltPer10mL, "mg per 10 mL", 0));
+    set("nVolPerBottle", nRate > 0 ? fmt(nVol, "uL", 0) : "not used");
+    set("nVolTotal", nRate > 0 ? fmt(nVol * bottles, "uL", 0) : "not used");
+    set("nVolExtra", nRate > 0 ? fmt(nVol * bottles * 1.1, "uL with 10% overage", 0) : "not used");
+    set("balanceVolume", fmt(dmppVolume, "uL each", 0));
+    set("balanceTotal", fmt(dmppVolume * 3 * n, "uL", 0));
+    set("aceSummary", fmt(acePer, "mL of acetylene-air stock"));
+    set("octSummary", fmt(octPer, "mL of 1-octyne stock"));
+    set("dmppSummary", fmt(dmppDose, "ug per bottle", 2));
   }
   ids.forEach(function (id) { document.getElementById(id).addEventListener("input", update); });
   update();
