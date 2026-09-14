@@ -61,7 +61,7 @@ At Day 0, remove 0.3 g for mineral N and 4.0 g for DNA/RNA from each bottle befo
 
 | Study day | Mineral N from each bottle | Molecular sample from each bottle | Bottle status |
 |---:|---:|---:|---|
-| 0 | 0.3 g | 4.0 g | Sample first, then add treatment and begin formal incubation |
+| 0 | 0.3 g, taken **after** the nitrogen addition | 4.0 g, taken **before** any addition | Molecular sample, then nitrogen, then mineral-N sample, then DMPP, then seal and inject gases |
 | 2 | 0.3 g | No | Reseal after sampling |
 | 4 | 0.3 g | No | Reseal after sampling |
 | 7 | 0.3 g | No | Reseal after sampling |
@@ -171,7 +171,8 @@ Enter the number of independent source-soil samples. One source sample receives 
   <li><input type="checkbox"><span>Remove a separate <strong>15 g</strong> from the original sample bag for WHC. Follow the [gravity-drainage WHC protocol](soil-whc-gravity-drainage.md); do not use soil taken from a culture bottle for this measurement.</span></li>
   <li><input type="checkbox"><span>Place <strong>45 g</strong> of the remaining soil into a labeled preincubation container. Adjust moisture only according to the project plan and record every addition.</span></li>
   <li><input type="checkbox"><span>Preincubate for <strong>14 days</strong> at the project-defined temperature in the dark. Keep handling, container type, moisture target, and temperature consistent across samples.</span></li>
-  <li><input type="checkbox"><span>At the end of preincubation, mix the soil gently and distribute <strong>10 g</strong> into each of four labeled 150 mL serum bottles. Keep the approximately <strong>5 g</strong> remainder as handling reserve.</span></li>
+  <li><input type="checkbox"><span>At the end of preincubation, mix the soil gently and take <strong>0.3 g</strong> from the preincubation container into a mineral-N tube. This is the pre-amendment baseline: it records the native mineral-N pool the treatments start from, it is shared by all four bottles of that soil, and it costs no bottle soil. Follow the linked [ammonium and nitrate extraction workflow](ammonium-nitrate-assay.md).</span></li>
+  <li><input type="checkbox"><span>Distribute <strong>10 g</strong> into each of four labeled 150 mL serum bottles. Keep the approximately <strong>5 g</strong> remainder as handling reserve.</span></li>
 </ul>
 
 ---
@@ -251,10 +252,10 @@ If only ammonium chloride is available, NH4Cl has a molar mass of 53.49 g/mol an
 Check before use: 314 mg / 10 mL = 31.4 mg/mL; 31.4 x 0.2120 = 6.66 mg N/mL; 6.66 x 0.120 = 0.800 mg N per bottle.
 
 !!! warning "Expected day-0 reading is set by the real soil mass, not the calculation basis"
-    The dose is calculated against the 10 g transfer mass but the bottle actually holds about 5.7 g after Day-0 sampling, so 800 ug N raises the measured concentration by roughly 800 / 5.7 = **140 ug N per g**, not 80. Compare the day-0 recovery check against that figure plus the native pool. A reading well below it means part of the ammonium is clay-fixed and not KCl-extractable; use the measured day-0 value as the baseline instead of the nominal dose.
+    The dose is calculated against the 10 g transfer mass, but the nitrogen goes in after the 4.0 g molecular sample has been removed, so it lands in about 6.0 g. That raises the measured concentration by roughly 800 / 6.0 = **133 ug N per g**, not 80. Compare the day-0 recovery check against that figure plus the native pool. A reading well below it means part of the ammonium is clay-fixed and not KCl-extractable; use the measured day-0 value as the baseline instead of the nominal dose.
 
 !!! warning "Add nitrogen to every bottle and balance the liquid volume"
-    Nitrogen goes into **all four** bottles, including Ctrl and Ace. Only the inhibitor may differ between bottles. Add 120 uL of nitrogen stock to every bottle, then add the DMPP dilution to the DMPP bottle and an equal volume of DI water to the other three, so that every bottle receives the same total liquid.
+    Nitrogen goes into **all four** bottles, including Ctrl and Ace. Only the inhibitor may differ between bottles. Add 120 uL of nitrogen stock to every bottle **first**, then the DMPP dilution to the DMPP bottle and an equal volume of DI water to the other three, so that every bottle receives the same total liquid. Never establish an inhibitor before the nitrogen.
 
 ---
 
@@ -325,17 +326,34 @@ Check before use: 314 mg / 10 mL = 31.4 mg/mL; 31.4 x 0.2120 = 6.66 mg N/mL; 6.6
 
 ## Part C: Day 0 Sampling, Treatment Addition, and Start
 
+!!! danger "Nitrogen goes in first; every inhibitor goes in after it"
+    No inhibitor may be established before the nitrogen it is meant to act on. Under an amended option the order is **nitrogen to all four bottles, then DMPP, then seal, then acetylene and 1-octyne**. Adding an inhibitor first would let it act on the pre-amendment substrate pool only, and any liquid addition after sealing would mean venting the gas inhibitors.
+
+    Under **N-none** the same sequence applies with the nitrogen step skipped.
+
+Steps 3 to 7 below are one continuous operation. Work bottle by bottle within a soil, and keep the elapsed time from the nitrogen addition to the gas injection as short and as uniform as possible across bottles.
+
 <ul class="checklist">
-  <li><input type="checkbox"><span>Confirm bottle IDs, target treatment, soil mass, preincubation duration, and the selected moisture target before sampling.</span></li>
-  <li><input type="checkbox"><span>From each bottle, remove <strong>0.3 g</strong> soil into its mineral-N tube. Add 1.5 mL 1 M KCl and follow the linked [ammonium and nitrate extraction workflow](ammonium-nitrate-assay.md).</span></li>
-  <li><input type="checkbox"><span>From each bottle, remove a separate <strong>4.0 g</strong> molecular sample. Freeze DNA- and RNA-intended material under the approved storage conditions. This is the Day-0 baseline from the culture bottle.</span></li>
-  <li><input type="checkbox"><span>If amending nitrogen, add the calculated volume of ammonium sulfate stock to <strong>all four</strong> bottles, including Ctrl and Ace. Record the option used (N-80 or N-150) and the stock ID. Skip under N-none.</span></li>
-  <li><input type="checkbox"><span>For the DMPP bottle, add the calculated volume of the recorded third serial 1:10 dilution (240 uL under N-none or N-80; 450 uL under N-150). Mix as consistently as possible without losing soil.</span></li>
-  <li><input type="checkbox"><span>Add an equal volume of DI water to the Ctrl, Ace, and Oct bottles so every bottle receives the same total liquid.</span></li>
+  <li><input type="checkbox"><span>Confirm bottle IDs, target treatment, soil mass, preincubation duration, nitrogen option, and the selected moisture target before sampling.</span></li>
+  <li><input type="checkbox"><span>From each bottle, remove the <strong>4.0 g</strong> molecular sample first, while the soil is still untreated. Freeze DNA- and RNA-intended material under the approved storage conditions. This is the Day-0 molecular baseline. The bottle now holds about <strong>6.0 g</strong>.</span></li>
+  <li><input type="checkbox"><span><strong>Nitrogen first.</strong> If amending, add the calculated volume of ammonium sulfate stock to <strong>all four</strong> bottles, including Ctrl and Ace. Record the option used (N-80 or N-150), the stock ID, and the clock time. Skip this step under N-none.</span></li>
+  <li><input type="checkbox"><span>Mix each bottle gently and evenly so the nitrogen is distributed before anything else is added.</span></li>
+  <li><input type="checkbox"><span>Remove <strong>0.3 g</strong> soil into its mineral-N tube, add 1.5 mL 1 M KCl, and follow the linked [ammonium and nitrate extraction workflow](ammonium-nitrate-assay.md). This is the true Day-0 mineral-N baseline and doubles as the nitrogen recovery check. Taking it here rather than after the DMPP step means no DMPP is lost with the subsample. The bottle now holds about <strong>5.7 g</strong>.</span></li>
+  <li><input type="checkbox"><span><strong>Then DMPP.</strong> For the DMPP bottle, add the calculated volume of the recorded third serial 1:10 dilution (240 uL under N-none or N-80; 450 uL under N-150). Add an equal volume of DI water to the Ctrl, Ace, and Oct bottles so every bottle receives the same total liquid. Mix as consistently as possible without losing soil.</span></li>
   <li><input type="checkbox"><span>Seal every bottle with its stopper and crimp. Check for a stable seal before gas injection.</span></li>
-  <li><input type="checkbox"><span>Inject the calculated acetylene-air stock into Ace bottles. Inject the documented 1-octyne stock volume into Oct bottles. Do not add inhibitors to Ctrl bottles.</span></li>
-  <li><input type="checkbox"><span>Record formal incubation start date/time, actual headspace calculation, inhibitor stock ID, injection volume, temperature, moisture adjustment, and operator.</span></li>
+  <li><input type="checkbox"><span><strong>Then the gas inhibitors.</strong> Inject the calculated acetylene-air stock into Ace bottles and the documented 1-octyne stock volume into Oct bottles. Do not add inhibitors to Ctrl bottles. Record the clock time.</span></li>
+  <li><input type="checkbox"><span>Record formal incubation start date/time, the elapsed time from nitrogen addition to gas injection, actual headspace calculation, inhibitor stock ID, injection volume, temperature, moisture adjustment, and operator.</span></li>
 </ul>
+
+!!! warning "Where each addition actually lands"
+    The removals happen between additions, so the two liquid agents do not see the same soil mass even though both are dosed against the 10 g transfer basis.
+
+    | Addition | Soil present at that moment | Effective concentration under N-80 |
+    |---|---:|---|
+    | Ammonium sulfate | 6.0 g | 800 ug N / 6.0 g = **133 ug N per g** |
+    | DMPP | 5.7 g | 12 ug / 5.7 g = **2.11 ug per g** |
+
+    Gas inhibitors are unaffected because they are dosed against measured headspace, not soil mass.
 
 ---
 
@@ -386,6 +404,10 @@ At Days 2, 4, and 7, collect 0.3 g soil for mineral N. At Day 10, collect 0.3 g 
     <tr><th>Oct stock / injection volume</th><td contenteditable="true"></td></tr>
     <tr><th>Soil calculation basis (5 g post-Day-0 or other) and field-moist vs dry-mass</th><td contenteditable="true">5 g post-Day-0</td></tr>
     <tr><th>Nitrogen option / stock ID / volume per bottle</th><td contenteditable="true">N-none</td></tr>
+    <tr><th>Clock time of nitrogen addition</th><td contenteditable="true"></td></tr>
+    <tr><th>Clock time of gas injection / elapsed time since nitrogen</th><td contenteditable="true"></td></tr>
+    <tr><th>Pre-amendment mineral-N sample ID (from preincubation container)</th><td contenteditable="true"></td></tr>
+    <tr><th>Day-0 post-amendment mineral-N sample ID / recovery check</th><td contenteditable="true"></td></tr>
     <tr><th>DMPP dilution selected / volume / dose</th><td contenteditable="true"></td></tr>
     <tr><th>DI balance volume added to non-DMPP bottles</th><td contenteditable="true"></td></tr>
     <tr><th>Gas vial IDs and collection times</th><td contenteditable="true"></td></tr>
@@ -404,6 +426,8 @@ At Days 2, 4, and 7, collect 0.3 g soil for mineral N. At Day 10, collect 0.3 g 
 
 !!! danger "Stop and resolve before continuing"
     - The nitrogen option (N-none, N-80, or N-150) is not recorded before any solution is added.
+    - Any inhibitor was established before the nitrogen addition, or nitrogen was added to a bottle that had already been sealed and gassed.
+    - The Day-0 mineral-N sample was taken before the nitrogen addition, so it cannot serve as the t = 0 baseline or as the recovery check.
     - Nitrogen was added to some bottles but not all four, or the liquid volume was not balanced across bottles.
     - The DMPP working-stock ID, third serial dilution, or delivered volume is not recorded.
     - The DMPP dose falls below 1.5% of added N.
